@@ -58,7 +58,7 @@ class CollectorController: NSObject {
     
     func startMetricCollection() {
         NSWorkspace.shared().notificationCenter.addObserver(self, selector: #selector(applicationSwitchTriggered), name: NSNotification.Name.NSWorkspaceDidActivateApplication, object: nil)
-        //handleApplicationSwitch()
+        handleApplicationSwitch()
     }
     
     func stopMetricCollection() {

@@ -9,6 +9,7 @@
 import Foundation
 
 public class Metric {
+    public var id: Int64!
     public var appName: String?
     public var bundleIdentifier: String?
     public var bundleURL: String?
@@ -17,5 +18,5 @@ public class Metric {
     public var tabUrl: String?
     public var timestampEnd: NSDate?
     public var timestampStart: NSDate?
-    //public var session: Session?
+    public var session: Int64!
 }

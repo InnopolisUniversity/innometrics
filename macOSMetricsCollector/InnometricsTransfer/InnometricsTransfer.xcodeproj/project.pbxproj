@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251FBE481E479F180031DB6D /* UserPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE471E479F180031DB6D /* UserPrefs.swift */; };
+		251FBE511E47B2360031DB6D /* AllMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE501E47B2360031DB6D /* AllMetricsController.swift */; };
+		251FBE541E47BF4B0031DB6D /* NewMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */; };
+		251FBE581E47F14D0031DB6D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE571E47F14D0031DB6D /* Application.swift */; };
 		2554328B1DCB9D2100735C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554328A1DCB9D2100735C27 /* AppDelegate.swift */; };
-		2554328D1DCB9D2100735C27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554328C1DCB9D2100735C27 /* ViewController.swift */; };
+		2554328D1DCB9D2100735C27 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554328C1DCB9D2100735C27 /* MainController.swift */; };
 		2554328F1DCB9D2100735C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2554328E1DCB9D2100735C27 /* Assets.xcassets */; };
 		255432921DCB9D2100735C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255432901DCB9D2100735C27 /* Main.storyboard */; };
 		256649C61E3608D60090B5D0 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256649BD1E3608A70090B5D0 /* SQLite.framework */; };
+		25A2017B1E3DF1370046EC5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2017A1E3DF1370046EC5D /* Session.swift */; };
 		25D06CF41DCFCE5F00A1A2D1 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */; };
+		25D73DF81E478D95006C7BB7 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D73DF71E478D95006C7BB7 /* Keyword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,14 +74,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251FBE471E479F180031DB6D /* UserPrefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPrefs.swift; sourceTree = "<group>"; };
+		251FBE501E47B2360031DB6D /* AllMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMetricsController.swift; sourceTree = "<group>"; };
+		251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMetricsController.swift; sourceTree = "<group>"; };
+		251FBE571E47F14D0031DB6D /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		255432871DCB9D2100735C27 /* InnometricsTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnometricsTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2554328A1DCB9D2100735C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2554328C1DCB9D2100735C27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2554328C1DCB9D2100735C27 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		2554328E1DCB9D2100735C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		255432911DCB9D2100735C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		255432931DCB9D2100735C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
+		25A2017A1E3DF1370046EC5D /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
+		25D73DF71E478D95006C7BB7 /* Keyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +124,17 @@
 			isa = PBXGroup;
 			children = (
 				2554328A1DCB9D2100735C27 /* AppDelegate.swift */,
-				2554328C1DCB9D2100735C27 /* ViewController.swift */,
+				2554328C1DCB9D2100735C27 /* MainController.swift */,
 				2554328E1DCB9D2100735C27 /* Assets.xcassets */,
 				255432901DCB9D2100735C27 /* Main.storyboard */,
 				255432931DCB9D2100735C27 /* Info.plist */,
 				25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */,
+				25A2017A1E3DF1370046EC5D /* Session.swift */,
+				25D73DF71E478D95006C7BB7 /* Keyword.swift */,
+				251FBE471E479F180031DB6D /* UserPrefs.swift */,
+				251FBE501E47B2360031DB6D /* AllMetricsController.swift */,
+				251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */,
+				251FBE571E47F14D0031DB6D /* Application.swift */,
 			);
 			path = InnometricsTransfer;
 			sourceTree = "<group>";
@@ -271,8 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251FBE581E47F14D0031DB6D /* Application.swift in Sources */,
+				251FBE511E47B2360031DB6D /* AllMetricsController.swift in Sources */,
 				25D06CF41DCFCE5F00A1A2D1 /* Metric.swift in Sources */,
-				2554328D1DCB9D2100735C27 /* ViewController.swift in Sources */,
+				251FBE541E47BF4B0031DB6D /* NewMetricsController.swift in Sources */,
+				251FBE481E479F180031DB6D /* UserPrefs.swift in Sources */,
+				25D73DF81E478D95006C7BB7 /* Keyword.swift in Sources */,
+				25A2017B1E3DF1370046EC5D /* Session.swift in Sources */,
+				2554328D1DCB9D2100735C27 /* MainController.swift in Sources */,
 				2554328B1DCB9D2100735C27 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
