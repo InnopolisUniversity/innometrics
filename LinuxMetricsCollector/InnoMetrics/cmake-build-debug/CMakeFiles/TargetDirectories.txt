@@ -1,0 +1,4 @@
+/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles/InnoMetrics.dir
+/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles/sqlite3lib.dir

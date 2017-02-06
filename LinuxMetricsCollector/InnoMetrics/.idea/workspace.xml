@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="InnoMetrics" targetName="sqlite3lib" />
+      <config projectName="InnoMetrics" targetName="InnoMetrics" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c46e3ca1-ad86-45f1-be72-038cbe03a311" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="443" column="2" lean-forward="false" selection-start-line="443" selection-start-column="2" selection-end-line="443" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#244#893#0" expanded="false" />
+                <element signature="e#895#1635#0" expanded="false" />
+                <element signature="e#1637#3030#0" expanded="false" />
+                <element signature="e#3032#3484#0" expanded="false" />
+                <element signature="e#3520#7952#0" expanded="false" />
+                <element signature="e#7955#8408#0" expanded="false" />
+                <element signature="e#8410#8945#0" expanded="false" />
+                <element signature="e#8947#9762#0" expanded="false" />
+                <element signature="e#9764#10118#0" expanded="false" />
+                <element signature="e#10293#10594#0" expanded="false" />
+                <element signature="e#10596#11503#0" expanded="false" />
+                <element signature="e#11505#12938#0" expanded="false" />
+                <element signature="e#13101#13384#0" expanded="false" />
+                <element signature="e#14241#15515#0" expanded="false" />
+                <element signature="e#15530#16863#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="send_demon_main.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/send_demon_main.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+              <folding>
+                <element signature="e#38#56#0" expanded="true" />
+                <element signature="e#740#752#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbQueries.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sources/DbQueries.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="50" column="50" lean-forward="false" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>NUM_COLS</find>
+      <find>callback</find>
+      <find>InsertMetric</find>
+      <find>showButton</find>
+      <find>res</find>
+      <find>Code</find>
+      <find>CODE:</find>
+      <find>MultiValueDictKeyError</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Window.h" />
+        <option value="$PROJECT_DIR$/builder.ui" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Sources/main.cpp" />
+        <option value="$PROJECT_DIR$/Sources/BrowserFile.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/send_demon_main.cpp" />
+        <option value="$PROJECT_DIR$/Sources/measurements_main.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Sources/DbQueries.h" />
+        <option value="$PROJECT_DIR$/send_demon_main.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="59" />
+    <option name="y" value="24" />
+    <option name="width" value="1541" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InnoMetrics" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InnoMetrics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InnoMetrics" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InnoMetrics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../InnoMetrics2" />
+    <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.InnoMetrics">
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="InnoMetrics" TARGET_NAME="InnoMetrics" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="InnoMetrics" TARGET_NAME="InnoMetrics" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InnoMetrics" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InnoMetrics" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InnoMetrics" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InnoMetrics" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InnoMetrics" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InnoMetrics" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="InnoMetrics" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="InnoMetrics" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="InnoMetrics" TARGET_NAME="InnoMetrics" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="InnoMetrics" RUN_TARGET_NAME="InnoMetrics">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="InnoMetrics" TARGET_NAME="InnoMetrics" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="InnoMetrics" RUN_TARGET_NAME="InnoMetrics">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="sqlite3lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="InnoMetrics" TARGET_NAME="sqlite3lib" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.InnoMetrics" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="2" class="java.lang.String" itemvalue="Application.sqlite3lib" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c46e3ca1-ad86-45f1-be72-038cbe03a311" name="Default" comment="" />
+      <created>1482399413752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1482399413752</updated>
+      <workItem from="1482399415850" duration="1176000" />
+      <workItem from="1482566877589" duration="1872000" />
+      <workItem from="1482651826462" duration="817000" />
+      <workItem from="1482667049458" duration="179000" />
+      <workItem from="1483517793444" duration="6931000" />
+      <workItem from="1483863759660" duration="866000" />
+      <workItem from="1483865016255" duration="40288000" />
+      <workItem from="1484138714095" duration="11384000" />
+      <workItem from="1484295596648" duration="13388000" />
+      <workItem from="1484380071754" duration="15511000" />
+      <workItem from="1485785650940" duration="4448000" />
+      <workItem from="1485851227030" duration="4459000" />
+      <workItem from="1485934120643" duration="23532000" />
+      <workItem from="1486299401210" duration="8250000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="133101000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="59" y="24" width="1541" height="876" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27190137" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4082397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31835207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28089887" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50436956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/send_demon_main.h</url>
+          <line>99</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="34" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/send_demon_main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#38#56#0" expanded="true" />
+            <element signature="e#740#752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/DbQueries.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/DbQueries.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="50" lean-forward="false" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/DbQueries.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="50" lean-forward="false" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2805">
+          <caret line="187" column="4" lean-forward="false" selection-start-line="187" selection-start-column="4" selection-end-line="187" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/DbQueries.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/measurements_main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="4" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_demon_main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/DbQueries.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/measurements_main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="100" column="22" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/BrowserFile.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3645">
+          <caret line="243" column="90" lean-forward="false" selection-start-line="243" selection-start-column="90" selection-end-line="243" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/measurements_main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="116" column="6" lean-forward="true" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/builder.ui" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window.h" />
+    <entry file="file://$PROJECT_DIR$/Window.cpp" />
+    <entry file="file://$PROJECT_DIR$/builder.ui" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/Helpers/Helper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMake/ImportX11.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlite3/shell.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/thread">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1949">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/BrowserFile.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/glib-2.0/gobject/gobject.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/gtk-3.0/gtk/gtktreeview.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="270" column="24" lean-forward="true" selection-start-line="270" selection-start-column="24" selection-end-line="270" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/gtk-3.0/gtk/gtktreeviewcolumn.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="188" column="24" lean-forward="false" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/BrowserFile.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="237" column="24" lean-forward="false" selection-start-line="237" selection-start-column="24" selection-end-line="237" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/WindowInfo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/bits/typesizes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/bits/types.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="138" column="20" lean-forward="false" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/time.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/measurements_main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="76" column="4" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/gtk-3.0/gtk/gtkgrid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543">
+          <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/gtk-3.0/gtk/gtkmain.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="153" column="11" lean-forward="false" selection-start-line="153" selection-start-column="11" selection-end-line="153" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/glib-2.0/glib/gmain.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="569" column="30" lean-forward="false" selection-start-line="569" selection-start-column="9" selection-end-line="569" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/gtk-3.0/gtk/gtklabel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="92" column="22" lean-forward="false" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlite3/sqlite3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="3508" column="14" lean-forward="true" selection-start-line="3508" selection-start-column="2" selection-end-line="3508" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/chrono">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/DbQueries.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="50" column="50" lean-forward="false" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="443" column="2" lean-forward="false" selection-start-line="443" selection-start-column="2" selection-end-line="443" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#244#893#0" expanded="false" />
+            <element signature="e#895#1635#0" expanded="false" />
+            <element signature="e#1637#3030#0" expanded="false" />
+            <element signature="e#3032#3484#0" expanded="false" />
+            <element signature="e#3520#7952#0" expanded="false" />
+            <element signature="e#7955#8408#0" expanded="false" />
+            <element signature="e#8410#8945#0" expanded="false" />
+            <element signature="e#8947#9762#0" expanded="false" />
+            <element signature="e#9764#10118#0" expanded="false" />
+            <element signature="e#10293#10594#0" expanded="false" />
+            <element signature="e#10596#11503#0" expanded="false" />
+            <element signature="e#11505#12938#0" expanded="false" />
+            <element signature="e#13101#13384#0" expanded="false" />
+            <element signature="e#14241#15515#0" expanded="false" />
+            <element signature="e#15530#16863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_demon_main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+          <folding>
+            <element signature="e#38#56#0" expanded="true" />
+            <element signature="e#740#752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
