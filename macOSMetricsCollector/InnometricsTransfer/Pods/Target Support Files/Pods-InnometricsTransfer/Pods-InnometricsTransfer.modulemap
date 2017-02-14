@@ -1,0 +1,6 @@
+framework module Pods_InnometricsTransfer {
+  umbrella header "Pods-InnometricsTransfer-umbrella.h"
+
+  export *
+  module * { export * }
+}
