@@ -73,6 +73,26 @@ class MainController: NSViewController {
         newMetricsController.fetchNewMetricsAndRefreshTable()
     }
     
+    @IBAction func clearDataBase(_ sender: AnyObject) {
+        do {
+            let urls = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)
+            let appSupportURL = urls[urls.count - 1]
+            let dbPath = appSupportURL.appendingPathComponent("com.apple.toolsQA.CocoaApp_CD").appendingPathComponent("InnoMetricsCollector.storedata")
+            
+            let db = try Connection(dbPath.absoluteString)
+            
+            let metricsTable = Table("ZMETRIC")
+            let sessionTable = Table("ZSESSION")
+            try db.run(metricsTable.delete())
+            try db.run(sessionTable.delete())
+            
+            newMetricsController.fetchNewMetricsAndRefreshTable()
+            allMetricsController.fetchAllMetricsAndRefreshTable()
+        } catch {
+            print (error)
+        }
+    }
+    
     @IBAction func addKeywordsButtonClicked(_ sender: AnyObject) {
         keywordsArray.append(Keyword())
         prefsKeywordsArray.append(Keyword().keyword)

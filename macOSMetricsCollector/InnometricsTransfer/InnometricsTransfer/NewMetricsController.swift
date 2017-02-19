@@ -146,9 +146,12 @@ class NewMetricsController: NSViewController, NSTableViewDataSource, NSTableView
          
                 // You can print out response object
                 print("========\n========\nresponse = \(response)========\n")
-                self.dialogOKCancel(question: "Success", text: "Data have been sent successfully.")
-                UserPrefs.saveLastDataSendTime(time: Date().timeIntervalSinceReferenceDate)
-         
+                
+                DispatchQueue.main.async {
+                    self.dialogOKCancel(question: "Success", text: "Data have been sent successfully.")
+                    UserPrefs.saveLastDataSendTime(time: Date().timeIntervalSinceReferenceDate)
+                    self.fetchNewMetricsAndRefreshTable()
+                }
             }
             
             task.resume()

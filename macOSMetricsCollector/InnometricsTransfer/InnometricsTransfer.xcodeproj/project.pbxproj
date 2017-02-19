@@ -11,6 +11,8 @@
 		251FBE511E47B2360031DB6D /* AllMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE501E47B2360031DB6D /* AllMetricsController.swift */; };
 		251FBE541E47BF4B0031DB6D /* NewMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */; };
 		251FBE581E47F14D0031DB6D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE571E47F14D0031DB6D /* Application.swift */; };
+		2538C8341E485C7100C66401 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256649BD1E3608A70090B5D0 /* SQLite.framework */; };
+		2538C8351E485C7100C66401 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 256649BD1E3608A70090B5D0 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2554328B1DCB9D2100735C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554328A1DCB9D2100735C27 /* AppDelegate.swift */; };
 		2554328D1DCB9D2100735C27 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554328C1DCB9D2100735C27 /* MainController.swift */; };
 		2554328F1DCB9D2100735C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2554328E1DCB9D2100735C27 /* Assets.xcassets */; };
@@ -19,9 +21,17 @@
 		25A2017B1E3DF1370046EC5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2017A1E3DF1370046EC5D /* Session.swift */; };
 		25D06CF41DCFCE5F00A1A2D1 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */; };
 		25D73DF81E478D95006C7BB7 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D73DF71E478D95006C7BB7 /* Keyword.swift */; };
+		EEA8C5F1343F59D568663DD2 /* Pods_InnometricsTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E4CC4077A98BF717343E3A /* Pods_InnometricsTransfer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2538C8361E485C7100C66401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247B3B1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
 		256649B81E3608A70090B5D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
@@ -73,7 +83,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2538C8381E485C7100C66401 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2538C8351E485C7100C66401 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		06E4CC4077A98BF717343E3A /* Pods_InnometricsTransfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InnometricsTransfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		251FBE471E479F180031DB6D /* UserPrefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPrefs.swift; sourceTree = "<group>"; };
 		251FBE501E47B2360031DB6D /* AllMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMetricsController.swift; sourceTree = "<group>"; };
 		251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMetricsController.swift; sourceTree = "<group>"; };
@@ -88,6 +113,8 @@
 		25A2017A1E3DF1370046EC5D /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
 		25D73DF71E478D95006C7BB7 /* Keyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		BAC31C00E605E9A9C55DA596 /* Pods-InnometricsTransfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnometricsTransfer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer.debug.xcconfig"; sourceTree = "<group>"; };
+		CEDC31B9C38EF9571C8AFA2B /* Pods-InnometricsTransfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnometricsTransfer.release.xcconfig"; path = "Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +122,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2538C8341E485C7100C66401 /* SQLite.framework in Frameworks */,
 				256649C61E3608D60090B5D0 /* SQLite.framework in Frameworks */,
+				EEA8C5F1343F59D568663DD2 /* Pods_InnometricsTransfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +138,7 @@
 				255432881DCB9D2100735C27 /* Products */,
 				256649AB1E3608570090B5D0 /* Frameworks */,
 				256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */,
+				460BD7BD6F8C703444AEE3D3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +172,7 @@
 		256649AB1E3608570090B5D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06E4CC4077A98BF717343E3A /* Pods_InnometricsTransfer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,6 +191,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		460BD7BD6F8C703444AEE3D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAC31C00E605E9A9C55DA596 /* Pods-InnometricsTransfer.debug.xcconfig */,
+				CEDC31B9C38EF9571C8AFA2B /* Pods-InnometricsTransfer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,13 +207,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 255432961DCB9D2100735C27 /* Build configuration list for PBXNativeTarget "InnometricsTransfer" */;
 			buildPhases = (
+				2C06E911574840ADE75A5F02 /* [CP] Check Pods Manifest.lock */,
 				255432831DCB9D2100735C27 /* Sources */,
 				255432841DCB9D2100735C27 /* Frameworks */,
 				255432851DCB9D2100735C27 /* Resources */,
+				2538C8381E485C7100C66401 /* Embed Frameworks */,
+				E08269131504881AE2C5C13C /* [CP] Embed Pods Frameworks */,
+				1BD8706BEA288DEFBDD0E378 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2538C8371E485C7100C66401 /* PBXTargetDependency */,
 			);
 			name = InnometricsTransfer;
 			productName = InnometricsTransfer;
@@ -284,6 +329,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BD8706BEA288DEFBDD0E378 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C06E911574840ADE75A5F02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E08269131504881AE2C5C13C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		255432831DCB9D2100735C27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -302,6 +395,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2538C8371E485C7100C66401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite Mac";
+			targetProxy = 2538C8361E485C7100C66401 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		255432901DCB9D2100735C27 /* Main.storyboard */ = {
@@ -407,7 +508,9 @@
 		};
 		255432971DCB9D2100735C27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAC31C00E605E9A9C55DA596 /* Pods-InnometricsTransfer.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InnometricsTransfer/Info.plist;
@@ -421,7 +524,9 @@
 		};
 		255432981DCB9D2100735C27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEDC31B9C38EF9571C8AFA2B /* Pods-InnometricsTransfer.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InnometricsTransfer/Info.plist;
