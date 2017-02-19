@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;CMake Files\CMake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="InnoMetrics">
-				<Option output="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/InnoMetrics" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug"/>
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/InnoMetrics" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -63,7 +63,7 @@
 					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
 					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
-					<Add directory="/home/alon/ClionProjects/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -74,15 +74,15 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 InnoMetrics"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 InnoMetrics"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="InnoMetrics/fast">
-				<Option output="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/InnoMetrics" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug"/>
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/InnoMetrics" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -106,7 +106,7 @@
 					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
 					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
-					<Add directory="/home/alon/ClionProjects/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -117,15 +117,15 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 InnoMetrics/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 InnoMetrics/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="sqlite3lib">
-				<Option output="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/libsqlite3lib.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug"/>
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/libsqlite3lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
@@ -149,7 +149,7 @@
 					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
 					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
-					<Add directory="/home/alon/ClionProjects/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -160,15 +160,15 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 sqlite3lib"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 sqlite3lib"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="sqlite3lib/fast">
-				<Option output="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/libsqlite3lib.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alon/ClionProjects/InnoMetrics/cmake-build-debug"/>
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/libsqlite3lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
@@ -192,7 +192,7 @@
 					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
 					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
-					<Add directory="/home/alon/ClionProjects/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -203,74 +203,74 @@
 					<Add directory="/usr/include/c++/5/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 sqlite3lib/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 sqlite3lib/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/ApplicationType.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/ApplicationType.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.cpp">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.cpp">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/DbQueries.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/DbQueries.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.cpp">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.cpp">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.cpp">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.cpp">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.cpp">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.cpp">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.cpp">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.cpp">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/Sources/measurements_main.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/main.cpp">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/send_demon_main.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h">
 			<Option target="InnoMetrics"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/sqlite3/sqlite3.c">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/sqlite3.c">
 			<Option target="sqlite3lib"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/sqlite3/sqlite3.h">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/sqlite3.h">
 			<Option target="sqlite3lib"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/CMakeLists.txt">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/alon/ClionProjects/InnoMetrics/CMake/ImportX11.cmake">
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/CMake/ImportX11.cmake">
 			<Option virtualFolder="CMake Files\CMake\"/>
 		</Unit>
 	</Project>

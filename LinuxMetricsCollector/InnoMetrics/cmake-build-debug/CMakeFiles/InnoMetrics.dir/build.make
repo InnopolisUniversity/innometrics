@@ -43,10 +43,10 @@ RM = /home/alon/Downloads/clion-2016.2.2/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alon/ClionProjects/InnoMetrics
+CMAKE_SOURCE_DIR = /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alon/ClionProjects/InnoMetrics/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/InnoMetrics.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/InnoMetrics.dir/flags.make
 
 CMakeFiles/InnoMetrics.dir/main.cpp.o: CMakeFiles/InnoMetrics.dir/flags.make
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/InnoMetrics.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/main.cpp.o -c /home/alon/ClionProjects/InnoMetrics/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/InnoMetrics.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/main.cpp.o -c /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp
 
 CMakeFiles/InnoMetrics.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InnoMetrics.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/InnoMetrics/main.cpp > CMakeFiles/InnoMetrics.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp > CMakeFiles/InnoMetrics.dir/main.cpp.i
 
 CMakeFiles/InnoMetrics.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InnoMetrics.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/InnoMetrics/main.cpp -o CMakeFiles/InnoMetrics.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp -o CMakeFiles/InnoMetrics.dir/main.cpp.s
 
 CMakeFiles/InnoMetrics.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/InnoMetrics.dir/main.cpp.o.provides.build: CMakeFiles/InnoMetrics.dir
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o: CMakeFiles/InnoMetrics.dir/flags.make
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o: ../Sources/Helpers/XInputListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o -c /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o -c /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.cpp
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.i
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.s
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o.provides.build: 
 
 CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o: CMakeFiles/InnoMetrics.dir/flags.make
 CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o: ../Sources/BrowserFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o -c /home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o -c /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.cpp
 
 CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.cpp > CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.cpp > CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.i
 
 CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.cpp -o CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.cpp -o CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.s
 
 CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o: CMakeFiles/InnoMetrics.dir/flags.make
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o: ../Sources/Helpers/Helper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o -c /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o -c /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.cpp
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.i
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.s
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o: CMakeFiles/InnoMetrics.dir/flags.make
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o: ../Sources/Helpers/SystemInfoHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o -c /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o -c /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.i
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.s
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o.provides.build
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o: CMakeFiles/InnoMetrics.dir/flags.make
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o: ../Sources/Helpers/WindowHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o -c /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o -c /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.cpp
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.cpp > CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.i
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.cpp -o CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.s
 
 CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o.provides.build: CM
 
 CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o: CMakeFiles/InnoMetrics.dir/flags.make
 CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o: ../Sources/WindowInfo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o -c /home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o -c /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.cpp
 
 CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.cpp > CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.cpp > CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.i
 
 CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.cpp -o CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.cpp -o CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.s
 
 CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o.requires:
 
@@ -265,7 +265,7 @@ InnoMetrics: /usr/lib/x86_64-linux-gnu/libXext.so
 InnoMetrics: /usr/lib/x86_64-linux-gnu/libXmu.so
 InnoMetrics: /usr/lib/x86_64-linux-gnu/libXi.so
 InnoMetrics: CMakeFiles/InnoMetrics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable InnoMetrics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable InnoMetrics"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/InnoMetrics.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -288,6 +288,6 @@ CMakeFiles/InnoMetrics.dir/clean:
 .PHONY : CMakeFiles/InnoMetrics.dir/clean
 
 CMakeFiles/InnoMetrics.dir/depend:
-	cd /home/alon/ClionProjects/InnoMetrics/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alon/ClionProjects/InnoMetrics /home/alon/ClionProjects/InnoMetrics /home/alon/ClionProjects/InnoMetrics/cmake-build-debug /home/alon/ClionProjects/InnoMetrics/cmake-build-debug /home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles/InnoMetrics.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/InnoMetrics.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/InnoMetrics.dir/depend
 

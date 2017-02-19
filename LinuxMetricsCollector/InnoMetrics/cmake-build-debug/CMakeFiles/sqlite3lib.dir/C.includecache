@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/alon/ClionProjects/InnoMetrics/sqlite3/sqlite3.c
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/sqlite3.c
 vxWorks.h
 -
 pthread.h
 -
 mingw.h
-/home/alon/ClionProjects/InnoMetrics/sqlite3/mingw.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/mingw.h
 _mingw.h
-/home/alon/ClionProjects/InnoMetrics/sqlite3/_mingw.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/_mingw.h
 stdarg.h
 -
 config.h
-/home/alon/ClionProjects/InnoMetrics/sqlite3/config.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/config.h
 stdint.h
 -
 inttypes.h
@@ -54,7 +54,7 @@ malloc.h
 pthread.h
 -
 windows.h
-/home/alon/ClionProjects/InnoMetrics/sqlite3/windows.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/windows.h
 sys/cygwin.h
 -
 errno.h
@@ -98,11 +98,11 @@ sys/statvfs.h
 dlfcn.h
 -
 sqlite_tcl.h
-/home/alon/ClionProjects/InnoMetrics/sqlite3/sqlite_tcl.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/sqlite_tcl.h
 tcl.h
-/home/alon/ClionProjects/InnoMetrics/sqlite3/tcl.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/tcl.h
 sqlite3rtree.h
-/home/alon/ClionProjects/InnoMetrics/sqlite3/sqlite3rtree.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/sqlite3rtree.h
 unicode/utypes.h
 -
 unicode/uregex.h

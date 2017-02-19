@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/alon/ClionProjects/InnoMetrics/sqlite3/sqlite3.c" "/home/alon/ClionProjects/InnoMetrics/cmake-build-debug/CMakeFiles/sqlite3lib.dir/sqlite3/sqlite3.c.o"
+  "/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3/sqlite3.c" "/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/sqlite3lib.dir/sqlite3/sqlite3.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

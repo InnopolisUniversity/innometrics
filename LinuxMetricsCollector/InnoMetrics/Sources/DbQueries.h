@@ -43,9 +43,18 @@ public:
 
     }
 
-    static std::string SelectAllMetrics() {
-        return "SELECT * FROM Metrics WHERE ConnectTime >= ? AND ConnectTime <=? LIMIT ?;";
+    static std::string UpdateToSent() {
+        return  "UPDATE Metrics " \
+                "SET Sent = 1 " \
+                "WHERE ";
+
     }
+
+    static std::string SelectAllMetrics() {
+        return "SELECT * FROM Metrics WHERE ConnectTime >= ? AND ConnectTime <=? AND (? OR Sent=0) LIMIT ?;";
+    }
+
+
 
     static std::string SelectNonSentMetrics() {
         return "SELECT * FROM Metrics WHERE Sent=0 LIMIT ?;";
