@@ -7,101 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25135BA31E6196C900D0723E /* MetricsTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25135BA21E6196C900D0723E /* MetricsTransfer.swift */; };
+		25135BA71E6199B900D0723E /* AuthorizationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25135BA61E6199B900D0723E /* AuthorizationUtils.swift */; };
+		25135BA91E61D2E900D0723E /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25135BA81E61D2E900D0723E /* AuthorizationController.swift */; };
 		251FBE481E479F180031DB6D /* UserPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE471E479F180031DB6D /* UserPrefs.swift */; };
-		251FBE511E47B2360031DB6D /* AllMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE501E47B2360031DB6D /* AllMetricsController.swift */; };
-		251FBE541E47BF4B0031DB6D /* NewMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */; };
+		251FBE541E47BF4B0031DB6D /* MetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE531E47BF4B0031DB6D /* MetricsController.swift */; };
 		251FBE581E47F14D0031DB6D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FBE571E47F14D0031DB6D /* Application.swift */; };
-		2538C8341E485C7100C66401 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256649BD1E3608A70090B5D0 /* SQLite.framework */; };
-		2538C8351E485C7100C66401 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 256649BD1E3608A70090B5D0 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		255380F61E60694600F78CF6 /* Pods_InnometricsTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E4CC4077A98BF717343E3A /* Pods_InnometricsTransfer.framework */; };
 		2554328B1DCB9D2100735C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554328A1DCB9D2100735C27 /* AppDelegate.swift */; };
 		2554328D1DCB9D2100735C27 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554328C1DCB9D2100735C27 /* MainController.swift */; };
 		2554328F1DCB9D2100735C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2554328E1DCB9D2100735C27 /* Assets.xcassets */; };
 		255432921DCB9D2100735C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255432901DCB9D2100735C27 /* Main.storyboard */; };
-		256649C61E3608D60090B5D0 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256649BD1E3608A70090B5D0 /* SQLite.framework */; };
-		25A2017B1E3DF1370046EC5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2017A1E3DF1370046EC5D /* Session.swift */; };
-		25D06CF41DCFCE5F00A1A2D1 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */; };
+		2576479E1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2576479C1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodeld */; };
+		257647AA1E604022006C4FAA /* Metric+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257647A61E604022006C4FAA /* Metric+CoreDataClass.swift */; };
+		257647AB1E604022006C4FAA /* Metric+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257647A71E604022006C4FAA /* Metric+CoreDataProperties.swift */; };
+		257647AC1E604022006C4FAA /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257647A81E604022006C4FAA /* Session+CoreDataClass.swift */; };
+		257647AD1E604022006C4FAA /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257647A91E604022006C4FAA /* Session+CoreDataProperties.swift */; };
+		2591AAC81E631F630064E303 /* ServerPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591AAC71E631F630064E303 /* ServerPrefs.swift */; };
 		25D73DF81E478D95006C7BB7 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D73DF71E478D95006C7BB7 /* Keyword.swift */; };
-		EEA8C5F1343F59D568663DD2 /* Pods_InnometricsTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E4CC4077A98BF717343E3A /* Pods_InnometricsTransfer.framework */; };
+		25E0B4F11E61E0FC00765EA2 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0B4F01E61E0FC00765EA2 /* MainWindowController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2538C8361E485C7100C66401 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EE247B3B1C3F3ED000AE3E12;
-			remoteInfo = "SQLite Mac";
-		};
-		256649B81E3608A70090B5D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
-		256649BA1E3608A70090B5D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
-			remoteInfo = "SQLiteTests iOS";
-		};
-		256649BC1E3608A70090B5D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
-			remoteInfo = "SQLite Mac";
-		};
-		256649BE1E3608A70090B5D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
-			remoteInfo = "SQLiteTests Mac";
-		};
-		256649C01E3608A70090B5D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
-			remoteInfo = "SQLite tvOS";
-		};
-		256649C21E3608A70090B5D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
-			remoteInfo = "SQLiteTests tvOS";
-		};
-		256649C41E3608A70090B5D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A121AC451CA35C79005A31D1;
-			remoteInfo = "SQLite watchOS";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2538C8381E485C7100C66401 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2538C8351E485C7100C66401 /* SQLite.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06E4CC4077A98BF717343E3A /* Pods_InnometricsTransfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InnometricsTransfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25135BA21E6196C900D0723E /* MetricsTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricsTransfer.swift; sourceTree = "<group>"; };
+		25135BA61E6199B900D0723E /* AuthorizationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationUtils.swift; sourceTree = "<group>"; };
+		25135BA81E61D2E900D0723E /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		251FBE471E479F180031DB6D /* UserPrefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPrefs.swift; sourceTree = "<group>"; };
-		251FBE501E47B2360031DB6D /* AllMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMetricsController.swift; sourceTree = "<group>"; };
-		251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMetricsController.swift; sourceTree = "<group>"; };
+		251FBE531E47BF4B0031DB6D /* MetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricsController.swift; sourceTree = "<group>"; };
 		251FBE571E47F14D0031DB6D /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		255432871DCB9D2100735C27 /* InnometricsTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnometricsTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2554328A1DCB9D2100735C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,10 +42,14 @@
 		2554328E1DCB9D2100735C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		255432911DCB9D2100735C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		255432931DCB9D2100735C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
-		25A2017A1E3DF1370046EC5D /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
+		2576479D1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InnoMetricsCollector.xcdatamodel; sourceTree = "<group>"; };
+		257647A61E604022006C4FAA /* Metric+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Metric+CoreDataClass.swift"; sourceTree = "<group>"; };
+		257647A71E604022006C4FAA /* Metric+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Metric+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		257647A81E604022006C4FAA /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		257647A91E604022006C4FAA /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2591AAC71E631F630064E303 /* ServerPrefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerPrefs.swift; sourceTree = "<group>"; };
 		25D73DF71E478D95006C7BB7 /* Keyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		25E0B4F01E61E0FC00765EA2 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		BAC31C00E605E9A9C55DA596 /* Pods-InnometricsTransfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnometricsTransfer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer.debug.xcconfig"; sourceTree = "<group>"; };
 		CEDC31B9C38EF9571C8AFA2B /* Pods-InnometricsTransfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnometricsTransfer.release.xcconfig"; path = "Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,9 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2538C8341E485C7100C66401 /* SQLite.framework in Frameworks */,
-				256649C61E3608D60090B5D0 /* SQLite.framework in Frameworks */,
-				EEA8C5F1343F59D568663DD2 /* Pods_InnometricsTransfer.framework in Frameworks */,
+				255380F61E60694600F78CF6 /* Pods_InnometricsTransfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +72,6 @@
 				255432891DCB9D2100735C27 /* InnometricsTransfer */,
 				255432881DCB9D2100735C27 /* Products */,
 				256649AB1E3608570090B5D0 /* Frameworks */,
-				256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */,
 				460BD7BD6F8C703444AEE3D3 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -153,18 +87,16 @@
 		255432891DCB9D2100735C27 /* InnometricsTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				25E0B4F31E61EAA700765EA2 /* Metrics */,
+				25E0B4F21E61EA7900765EA2 /* Authorization */,
+				257647A51E604016006C4FAA /* Model */,
 				2554328A1DCB9D2100735C27 /* AppDelegate.swift */,
-				2554328C1DCB9D2100735C27 /* MainController.swift */,
 				2554328E1DCB9D2100735C27 /* Assets.xcassets */,
 				255432901DCB9D2100735C27 /* Main.storyboard */,
 				255432931DCB9D2100735C27 /* Info.plist */,
-				25D06CF31DCFCE5F00A1A2D1 /* Metric.swift */,
-				25A2017A1E3DF1370046EC5D /* Session.swift */,
-				25D73DF71E478D95006C7BB7 /* Keyword.swift */,
-				251FBE471E479F180031DB6D /* UserPrefs.swift */,
-				251FBE501E47B2360031DB6D /* AllMetricsController.swift */,
-				251FBE531E47BF4B0031DB6D /* NewMetricsController.swift */,
 				251FBE571E47F14D0031DB6D /* Application.swift */,
+				25E0B4F01E61E0FC00765EA2 /* MainWindowController.swift */,
+				2591AAC71E631F630064E303 /* ServerPrefs.swift */,
 			);
 			path = InnometricsTransfer;
 			sourceTree = "<group>";
@@ -177,18 +109,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		256649AF1E3608A60090B5D0 /* Products */ = {
+		257647A51E604016006C4FAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				256649B91E3608A70090B5D0 /* SQLite.framework */,
-				256649BB1E3608A70090B5D0 /* SQLiteTests iOS.xctest */,
-				256649BD1E3608A70090B5D0 /* SQLite.framework */,
-				256649BF1E3608A70090B5D0 /* SQLiteTests Mac.xctest */,
-				256649C11E3608A70090B5D0 /* SQLite.framework */,
-				256649C31E3608A70090B5D0 /* SQLiteTests tvOS.xctest */,
-				256649C51E3608A70090B5D0 /* SQLite.framework */,
+				257647A61E604022006C4FAA /* Metric+CoreDataClass.swift */,
+				257647A71E604022006C4FAA /* Metric+CoreDataProperties.swift */,
+				257647A81E604022006C4FAA /* Session+CoreDataClass.swift */,
+				257647A91E604022006C4FAA /* Session+CoreDataProperties.swift */,
+				2576479C1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodeld */,
 			);
-			name = Products;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		25E0B4F21E61EA7900765EA2 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				25135BA81E61D2E900D0723E /* AuthorizationController.swift */,
+				25135BA61E6199B900D0723E /* AuthorizationUtils.swift */,
+			);
+			name = Authorization;
+			sourceTree = "<group>";
+		};
+		25E0B4F31E61EAA700765EA2 /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				2554328C1DCB9D2100735C27 /* MainController.swift */,
+				251FBE531E47BF4B0031DB6D /* MetricsController.swift */,
+				251FBE471E479F180031DB6D /* UserPrefs.swift */,
+				25D73DF71E478D95006C7BB7 /* Keyword.swift */,
+				25135BA21E6196C900D0723E /* MetricsTransfer.swift */,
+			);
+			name = Metrics;
 			sourceTree = "<group>";
 		};
 		460BD7BD6F8C703444AEE3D3 /* Pods */ = {
@@ -211,14 +162,12 @@
 				255432831DCB9D2100735C27 /* Sources */,
 				255432841DCB9D2100735C27 /* Frameworks */,
 				255432851DCB9D2100735C27 /* Resources */,
-				2538C8381E485C7100C66401 /* Embed Frameworks */,
 				E08269131504881AE2C5C13C /* [CP] Embed Pods Frameworks */,
 				1BD8706BEA288DEFBDD0E378 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2538C8371E485C7100C66401 /* PBXTargetDependency */,
 			);
 			name = InnometricsTransfer;
 			productName = InnometricsTransfer;
@@ -252,70 +201,12 @@
 			mainGroup = 2554327E1DCB9D2100735C27;
 			productRefGroup = 255432881DCB9D2100735C27 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 256649AF1E3608A60090B5D0 /* Products */;
-					ProjectRef = 256649AE1E3608A60090B5D0 /* SQLite.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				255432861DCB9D2100735C27 /* InnometricsTransfer */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		256649B91E3608A70090B5D0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 256649B81E3608A70090B5D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		256649BB1E3608A70090B5D0 /* SQLiteTests iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests iOS.xctest";
-			remoteRef = 256649BA1E3608A70090B5D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		256649BD1E3608A70090B5D0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 256649BC1E3608A70090B5D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		256649BF1E3608A70090B5D0 /* SQLiteTests Mac.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests Mac.xctest";
-			remoteRef = 256649BE1E3608A70090B5D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		256649C11E3608A70090B5D0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 256649C01E3608A70090B5D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		256649C31E3608A70090B5D0 /* SQLiteTests tvOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests tvOS.xctest";
-			remoteRef = 256649C21E3608A70090B5D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		256649C51E3608A70090B5D0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 256649C41E3608A70090B5D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		255432851DCB9D2100735C27 /* Resources */ = {
@@ -383,26 +274,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				251FBE581E47F14D0031DB6D /* Application.swift in Sources */,
-				251FBE511E47B2360031DB6D /* AllMetricsController.swift in Sources */,
-				25D06CF41DCFCE5F00A1A2D1 /* Metric.swift in Sources */,
-				251FBE541E47BF4B0031DB6D /* NewMetricsController.swift in Sources */,
+				257647AC1E604022006C4FAA /* Session+CoreDataClass.swift in Sources */,
+				251FBE541E47BF4B0031DB6D /* MetricsController.swift in Sources */,
+				2591AAC81E631F630064E303 /* ServerPrefs.swift in Sources */,
 				251FBE481E479F180031DB6D /* UserPrefs.swift in Sources */,
+				25135BA71E6199B900D0723E /* AuthorizationUtils.swift in Sources */,
+				25135BA31E6196C900D0723E /* MetricsTransfer.swift in Sources */,
+				257647AD1E604022006C4FAA /* Session+CoreDataProperties.swift in Sources */,
+				25135BA91E61D2E900D0723E /* AuthorizationController.swift in Sources */,
+				2576479E1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodeld in Sources */,
 				25D73DF81E478D95006C7BB7 /* Keyword.swift in Sources */,
-				25A2017B1E3DF1370046EC5D /* Session.swift in Sources */,
 				2554328D1DCB9D2100735C27 /* MainController.swift in Sources */,
+				257647AB1E604022006C4FAA /* Metric+CoreDataProperties.swift in Sources */,
+				257647AA1E604022006C4FAA /* Metric+CoreDataClass.swift in Sources */,
 				2554328B1DCB9D2100735C27 /* AppDelegate.swift in Sources */,
+				25E0B4F11E61E0FC00765EA2 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2538C8371E485C7100C66401 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SQLite Mac";
-			targetProxy = 2538C8361E485C7100C66401 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		255432901DCB9D2100735C27 /* Main.storyboard */ = {
@@ -510,7 +400,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAC31C00E605E9A9C55DA596 /* Pods-InnometricsTransfer.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InnometricsTransfer/Info.plist;
@@ -526,7 +415,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEDC31B9C38EF9571C8AFA2B /* Pods-InnometricsTransfer.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InnometricsTransfer/Info.plist;
@@ -560,6 +448,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2576479C1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2576479D1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodel */,
+			);
+			currentVersion = 2576479D1E603F73006C4FAA /* InnoMetricsCollector.xcdatamodel */;
+			path = InnoMetricsCollector.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2554327F1DCB9D2100735C27 /* Project object */;
 }

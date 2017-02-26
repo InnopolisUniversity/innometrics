@@ -12,7 +12,6 @@
 		2588A2E41E35FE0400D4B30B /* InnoMetricsCollectorHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2588A2E21E35FD4E00D4B30B /* InnoMetricsCollectorHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		25AB378D1E2FAF1400174767 /* BrowserInfoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB378C1E2FAF1400174767 /* BrowserInfoUtils.swift */; };
 		25C5B4EB1E267053007FF799 /* CollectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5B4EA1E267053007FF799 /* CollectorController.swift */; };
-		25C5B4ED1E26788A007FF799 /* CollectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5B4EC1E26788A007FF799 /* CollectorView.swift */; };
 		25C5B4F21E2684DF007FF799 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5B4EE1E2684DF007FF799 /* Session+CoreDataClass.swift */; };
 		25C5B4F31E2684DF007FF799 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5B4EF1E2684DF007FF799 /* Session+CoreDataProperties.swift */; };
 		25C5B4F41E2684DF007FF799 /* Metric+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5B4F01E2684DF007FF799 /* Metric+CoreDataClass.swift */; };
@@ -53,7 +52,6 @@
 		2588A2DD1E35FD4C00D4B30B /* InnoMetricsCollectorHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InnoMetricsCollectorHelper.xcodeproj; path = InnoMetricsCollectorHelper/InnoMetricsCollectorHelper.xcodeproj; sourceTree = "<group>"; };
 		25AB378C1E2FAF1400174767 /* BrowserInfoUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserInfoUtils.swift; sourceTree = "<group>"; };
 		25C5B4EA1E267053007FF799 /* CollectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectorController.swift; sourceTree = "<group>"; };
-		25C5B4EC1E26788A007FF799 /* CollectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectorView.swift; sourceTree = "<group>"; };
 		25C5B4EE1E2684DF007FF799 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataClass.swift"; path = "../Session+CoreDataClass.swift"; sourceTree = "<group>"; };
 		25C5B4EF1E2684DF007FF799 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataProperties.swift"; path = "../Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		25C5B4F01E2684DF007FF799 /* Metric+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Metric+CoreDataClass.swift"; path = "../Metric+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				25D57A921E1D6F7700B2265D /* MainMenu.xib */,
 				25D57A951E1D6F7700B2265D /* Info.plist */,
 				25C5B4EA1E267053007FF799 /* CollectorController.swift */,
-				25C5B4EC1E26788A007FF799 /* CollectorView.swift */,
 				25C5B4F81E26A593007FF799 /* InnoMetricsCollector_Bridging_Header.h */,
 				250D88F21E27A5F2009E5F32 /* CurrentWorkingApplicationController.swift */,
 				255312D81E27C13100674DF3 /* CurrentWorkingSessionController.swift */,
@@ -233,7 +230,6 @@
 			files = (
 				25C5B4F31E2684DF007FF799 /* Session+CoreDataProperties.swift in Sources */,
 				25C5B4F51E2684DF007FF799 /* Metric+CoreDataProperties.swift in Sources */,
-				25C5B4ED1E26788A007FF799 /* CollectorView.swift in Sources */,
 				255312D91E27C13100674DF3 /* CurrentWorkingSessionController.swift in Sources */,
 				25C5B4F41E2684DF007FF799 /* Metric+CoreDataClass.swift in Sources */,
 				250D88F31E27A5F2009E5F32 /* CurrentWorkingApplicationController.swift in Sources */,

@@ -24,9 +24,11 @@ class CollectorController: NSObject {
     @IBOutlet weak var pausePlayLabel: NSTextField!
     
     private var currentSession: Session!
-    private var metrics: [Metric] = []
+    private var currentMetric: Metric?
+    private var prevMetric: Metric?
     private var context: NSManagedObjectContext!
     private var isPaused: Bool = false
+    private var isPausedByDBModifing: Bool = false
     
     private var isCollectingBrowserInfo: Bool = false
     
@@ -52,6 +54,13 @@ class CollectorController: NSObject {
         // set up the NSManagedObjectContext
         let appDelegate = NSApplication.shared().delegate as! AppDelegate
         context = appDelegate.managedObjectContext
+        
+        let transferAppIdentifier = "com.denzap.InnometricsTransfer"
+        let startChangingDbNotificationName = Notification.Name("db_start_changing")
+        let endChangingDbNotificationName = Notification.Name("db_end_changing")
+        
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(dbChangeBegin), name: startChangingDbNotificationName, object: transferAppIdentifier)
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(dbChangeEnd), name: endChangingDbNotificationName, object: transferAppIdentifier)
         
         startMetricCollection()
     }
@@ -110,8 +119,8 @@ class CollectorController: NSObject {
                     
                     let foregroundWindowTabUrl = BrowserInfoUtils.activeTabURL(bundleIdentifier: foregroundWindowBundleId!)
                     
-                    if (self.metrics.count > 0) {
-                        if (foregroundWindowTabUrl == self.metrics[0].tabUrl) {
+                    if (self.prevMetric != nil) {
+                        if (foregroundWindowTabUrl == self.prevMetric!.tabUrl) {
                             continue
                         }
                     }
@@ -152,21 +161,24 @@ class CollectorController: NSObject {
             if (foregroundWindowTabTitle != nil) {
                 metric.tabName = foregroundWindowTabTitle!
             }
-            self.metrics.insert(metric, at: 0)
+            prevMetric = currentMetric
+            currentMetric = metric//self.metrics.insert(metric, at: 0)
         }
         
         do {
             try self.context.save()
-            self.metrics.insert(metric, at: 0)
+            prevMetric = currentMetric
+            currentMetric = metric
+            //self.metrics.insert(metric, at: 0)
         } catch {
             print("An error occurred")
         }
     }
     
     func setEndTimeOfPrevMetric() {
-        if metrics.count > 0 {
-            if (metrics[0].timestampEnd == nil) {
-                let metric = metrics[0]
+        if currentMetric != nil {
+            if (currentMetric!.timestampEnd == nil) {
+                let metric = currentMetric!
                 let endTime = NSDate()
                 metric.timestampEnd = endTime
                 
@@ -236,7 +248,6 @@ class CollectorController: NSObject {
             pausePlayLabel.stringValue = "Pause"
             isPaused = false
             startMetricCollection()
-            handleApplicationSwitch()
         } else {
             currentWorkingApplicationView.pauseTime()
             pausePlayBtn.image = #imageLiteral(resourceName: "playIcon")
@@ -244,6 +255,36 @@ class CollectorController: NSObject {
             isPaused = true
             stopMetricCollection()
         }
+    }
+    
+    func dbChangeBegin() {
+        context.reset()
+        currentSession = nil
+        currentMetric = nil
+        prevMetric = nil
+        pausePlayBtn.isEnabled = false
+        isPausedByDBModifing = true
+        
+        NSWorkspace.shared().notificationCenter.removeObserver(self)
+        isCollectingBrowserInfo = false
+        if (!isPaused) {
+            currentWorkingApplicationView.pauseTime()
+            pausePlayBtn.image = #imageLiteral(resourceName: "playIcon")
+            pausePlayLabel.stringValue = "Start"
+        }
+    }
+    
+    func dbChangeEnd() {
+        context.reset()
+        pausePlayBtn.isEnabled = true
+        if (isPausedByDBModifing && !isPaused) {
+            pausePlayBtn.image = #imageLiteral(resourceName: "pauseIcon")
+            pausePlayLabel.stringValue = "Pause"
+            isPaused = false
+            pausePlayBtn.isEnabled = true
+            startMetricCollection()
+        }
+        isPausedByDBModifing = false
     }
     
     private func setUpLaunchAtLogin() {
