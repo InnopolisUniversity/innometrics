@@ -21,6 +21,8 @@ class MainWindowController: NSWindowController {
         if AuthorizationUtils.isAuthorized() {
             self.contentViewController = mvc
         } else {
+            let appDelegate = NSApplication.shared().delegate as! AppDelegate
+            appDelegate.logOutMenuItem.isEnabled = false
             self.contentViewController = avc
         }
     }

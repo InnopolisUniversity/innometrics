@@ -39,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if ((enteredString.range(of: "\\s+", options: .regularExpression) != nil) || enteredString.characters.count == 0) {
                     let myPopup: NSAlert = NSAlert()
                     myPopup.messageText = "Warning"
-                    myPopup.informativeText = "Server URL cannot be empty"
+                    myPopup.informativeText = "Server URL cannot be empty."
                     myPopup.alertStyle = NSAlertStyle.informational
                     myPopup.addButton(withTitle: "OK")
                     myPopup.runModal()
@@ -55,7 +55,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func logOutBtn_Clicked(_ sender: AnyObject) {
         let alert: NSAlert = NSAlert()
-        alert.messageText = "Do you realy want to log out?"
+        alert.messageText = "InnometricsTransfer"
+        alert.informativeText = "You are sure you want to log out?"
         alert.alertStyle = NSAlertStyle.informational
         alert.addButton(withTitle: "Log Out")
         alert.addButton(withTitle: "Cancel")

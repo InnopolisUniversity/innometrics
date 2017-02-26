@@ -131,13 +131,4 @@ class MetricsController: NSViewController, NSTableViewDataSource, NSTableViewDel
         return NSString(format: "%0.2d:%0.2d:%0.2d",hours,minutes,seconds)
     }
     
-    func dialogOKCancel(question: String, text: String) {
-        let myPopup: NSAlert = NSAlert()
-        myPopup.messageText = question
-        myPopup.informativeText = text
-        myPopup.alertStyle = NSAlertStyle.informational
-        myPopup.addButton(withTitle: "OK")
-        myPopup.runModal()
-    }
-    
 }

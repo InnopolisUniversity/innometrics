@@ -80,7 +80,7 @@ class MainController: NSViewController {
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
-        lastTableRefreshTextField.stringValue = "Last table refresh: \(dateFormatter.string(from: Date()))"
+        lastTableRefreshTextField.stringValue = "Last update: \(dateFormatter.string(from: Date()))"
     }
 
     override var representedObject: Any? {
@@ -93,25 +93,21 @@ class MainController: NSViewController {
         metricsController.fetchNewMetricsAndRefreshTable()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
-        lastTableRefreshTextField.stringValue = "Last table refresh: \(dateFormatter.string(from: Date()))"
+        lastTableRefreshTextField.stringValue = "Last update: \(dateFormatter.string(from: Date()))"
     }
     
     @IBAction func clearDataBase(_ sender: AnyObject) {
         
         let alert: NSAlert = NSAlert()
-        alert.messageText = "Do you realy want to clear database?"
-        alert.informativeText = "All local date about metrics will be removed"
+        alert.messageText = "Would you like to delete metrics data and clear the local database?"
+        alert.informativeText = "This action cannot be undone."
         alert.alertStyle = NSAlertStyle.critical
         alert.addButton(withTitle: "Delete")
         alert.addButton(withTitle: "Cancel")
         
         let answer = alert.runModal()
         if answer == NSAlertFirstButtonReturn {
-            let startChangingDbNotificationName = Notification.Name("db_start_changing")
-            let endChangingDbNotificationName = Notification.Name("db_end_changing")
-            DistributedNotificationCenter.default().postNotificationName(startChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
             clearDatabase()
-            DistributedNotificationCenter.default().postNotificationName(endChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
         }
     }
     
@@ -199,15 +195,14 @@ class MainController: NSViewController {
     }
     
     @IBAction func sendMetricsBtnClicked(_ sender: AnyObject) {
-        
         if metricsController.metrics.count == 0 {
-            dialogOKCancel(question: "Warning", text: "There are no metrics data to send")
+            dialogOKCancel(question: "Warning", text: "There are no metrics data to send.")
             return
         }
         
         let alert: NSAlert = NSAlert()
-        alert.messageText = "Confirm sending data to the remote server."
-        alert.informativeText = "All metrics that you see on the screen will be send to the remote server."
+        alert.messageText = "Would you like to send metrics to the remote server?"
+        alert.informativeText = "All metrics that you see on the screen would be send to the remote server."
         alert.alertStyle = NSAlertStyle.warning
         alert.addButton(withTitle: "Send")
         alert.addButton(withTitle: "Cancel")
@@ -224,10 +219,10 @@ class MainController: NSViewController {
                     self.spinnerView.stopAnimation(self)
                     self.spinnerView.isHidden = true
                     if (response == 1) {
-                        self.dialogOKCancel(question: "Success", text: "Data have been sent successfully")
                         self.clearDatabase()
+                        self.dialogOKCancel(question: "Success", text: "Data have been sent successfully.")
                     } else {
-                        self.dialogOKCancel(question: "Error", text: "Something went wrong during sending")
+                        self.dialogOKCancel(question: "Error", text: "Something went wrong during sending.")
                     }
                 }
             }
@@ -245,6 +240,9 @@ class MainController: NSViewController {
     }
     
     func clearDatabase() {
+        let startChangingDbNotificationName = Notification.Name("db_start_changing")
+        let endChangingDbNotificationName = Notification.Name("db_end_changing")
+        DistributedNotificationCenter.default().postNotificationName(startChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
         do {
             let appDelegate = NSApplication.shared().delegate as! AppDelegate
             let context = appDelegate.managedObjectContext
@@ -272,6 +270,7 @@ class MainController: NSViewController {
         } catch {
             print (error)
         }
+        DistributedNotificationCenter.default().postNotificationName(endChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
     }
     
     func disableAllElements() {

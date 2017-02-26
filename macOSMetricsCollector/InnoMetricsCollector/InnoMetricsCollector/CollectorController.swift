@@ -28,7 +28,6 @@ class CollectorController: NSObject {
     private var prevMetric: Metric?
     private var context: NSManagedObjectContext!
     private var isPaused: Bool = false
-    private var isPausedByDBModifing: Bool = false
     
     private var isCollectingBrowserInfo: Bool = false
     
@@ -258,15 +257,9 @@ class CollectorController: NSObject {
     }
     
     func dbChangeBegin() {
-        context.reset()
-        currentSession = nil
-        currentMetric = nil
-        prevMetric = nil
         pausePlayBtn.isEnabled = false
-        isPausedByDBModifing = true
         
         NSWorkspace.shared().notificationCenter.removeObserver(self)
-        isCollectingBrowserInfo = false
         if (!isPaused) {
             currentWorkingApplicationView.pauseTime()
             pausePlayBtn.image = #imageLiteral(resourceName: "playIcon")
@@ -276,15 +269,17 @@ class CollectorController: NSObject {
     
     func dbChangeEnd() {
         context.reset()
+        currentSession = nil
+        currentMetric = nil
+        prevMetric = nil
+        
         pausePlayBtn.isEnabled = true
-        if (isPausedByDBModifing && !isPaused) {
+        if (!isPaused) {
             pausePlayBtn.image = #imageLiteral(resourceName: "pauseIcon")
             pausePlayLabel.stringValue = "Pause"
             isPaused = false
-            pausePlayBtn.isEnabled = true
             startMetricCollection()
         }
-        isPausedByDBModifing = false
     }
     
     private func setUpLaunchAtLogin() {
