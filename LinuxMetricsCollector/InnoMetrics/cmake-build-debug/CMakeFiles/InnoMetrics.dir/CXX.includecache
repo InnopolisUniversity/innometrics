@@ -10,15 +10,15 @@
 stdarg.h
 -
 
-/home/alon/ClionProjects/InnoMetrics/Sources/ApplicationType.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/ApplicationType.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.cpp
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.cpp
 BrowserFile.h
-/home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.h
 Helpers/Helper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 fstream
 -
 string
@@ -36,19 +36,19 @@ regex
 sqlite3.h
 -
 
-/home/alon/ClionProjects/InnoMetrics/Sources/DbQueries.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/DbQueries.h
 string
 -
 WindowInfo.h
-/home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.h
 Helpers/Helper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.cpp
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.cpp
 Helper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 string
 -
 cstring
@@ -66,11 +66,11 @@ cctype
 locale
 -
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp
 SystemInfoHelper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
 unistd.h
 -
 vector
@@ -86,13 +86,13 @@ string.h
 string
 -
 Helper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/Helper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.cpp
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.cpp
 WindowHelper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.h
 stdio.h
 -
 unistd.h
@@ -108,13 +108,13 @@ X11/Xmu/WinUtil.h
 sys/types.h
 -
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.cpp
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.cpp
 X11/extensions/XInput2.h
 -
 XInputListener.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.h
 iostream
 -
 X11/Xlib.h
@@ -126,19 +126,19 @@ cstring
 X11/extensions/XInput2.h
 -
 
-/home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.cpp
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.cpp
 WindowInfo.h
-/home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.h
 X11/Xlib.h
 -
 string
 -
 ApplicationType.h
-/home/alon/ClionProjects/InnoMetrics/Sources/ApplicationType.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/ApplicationType.h
 
-/home/alon/ClionProjects/InnoMetrics/Sources/measurements_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h
 locale.h
 -
 stdio.h
@@ -156,17 +156,17 @@ unordered_map
 X11/Xlib.h
 -
 WindowInfo.h
-/home/alon/ClionProjects/InnoMetrics/Sources/WindowInfo.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.h
 Helpers/WindowHelper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/WindowHelper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.h
 Helpers/XInputListener.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/XInputListener.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.h
 Helpers/SystemInfoHelper.h
-/home/alon/ClionProjects/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
 BrowserFile.h
-/home/alon/ClionProjects/InnoMetrics/Sources/BrowserFile.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.h
 DbQueries.h
-/home/alon/ClionProjects/InnoMetrics/Sources/DbQueries.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/DbQueries.h
 sqlite3.h
 -
 sstream
@@ -174,7 +174,7 @@ sstream
 fstream
 -
 
-/home/alon/ClionProjects/InnoMetrics/main.cpp
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp
 gtk/gtk.h
 -
 time.h
@@ -184,13 +184,13 @@ string
 thread
 -
 Sources/measurements_main.h
-/home/alon/ClionProjects/InnoMetrics/Sources/measurements_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h
 send_demon_main.h
-/home/alon/ClionProjects/InnoMetrics/send_demon_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h
 memory
 -
 
-/home/alon/ClionProjects/InnoMetrics/send_demon_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h
 stdio.h
 -
 curl/curl.h

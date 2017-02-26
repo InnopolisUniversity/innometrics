@@ -11,6 +11,20 @@ GtkWidget *calendar;
 GtkWidget *maxSpinner;
 
 
+GtkWidget * init_window_params(){
+    GtkWidget *window;
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    gtk_window_set_title (GTK_WINDOW (window), "InnoMetrics");
+    gtk_window_set_default_size (GTK_WINDOW (window), 800, 600);
+    gtk_container_set_border_width (GTK_CONTAINER (window), 0);
+    gtk_widget_set_size_request (window, 300, 300);
+    g_signal_connect (window, "delete_event", gtk_main_quit, NULL); /* dirty */
+    return window;
+}
+
+//region < View And Model  INIT >
+
+
 static GtkTreeModel *
 create_and_fill_model (void)
 {
@@ -27,7 +41,8 @@ create_and_fill_model (void)
                                 G_TYPE_STRING,
                                 G_TYPE_INT,
                                 G_TYPE_STRING,
-                                G_TYPE_STRING);
+                                G_TYPE_STRING,
+                                G_TYPE_BOOLEAN);
 
     return GTK_TREE_MODEL (store);
 }
@@ -84,6 +99,9 @@ create_view_and_model (void)
     /* --- Column *Disconnect time* --- */
     add_column_to_view("Disconnect time", COL_DISCONNECT_TIME);
 
+    /* --- Column *Sent* --- */
+    add_column_to_view("Sent", COL_SENT);
+
     model = create_and_fill_model ();
 
     gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
@@ -97,18 +115,35 @@ create_view_and_model (void)
     return;
 }
 
-GtkWidget * init_window_params(){
-    GtkWidget *window;
-    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_title (GTK_WINDOW (window), "InnoMetrics");
-    gtk_window_set_default_size (GTK_WINDOW (window), 800, 600);
-    gtk_container_set_border_width (GTK_CONTAINER (window), 0);
-    gtk_widget_set_size_request (window, 300, 300);
-    g_signal_connect (window, "delete_event", gtk_main_quit, NULL); /* dirty */
-    return window;
+//endregion < View And Model  INIT >
+
+//region < Show methods >
+#define SQLITE_PATH "metrics.db"
+
+bool onlyNonSent = false;
+
+static void create_calendar( GtkWidget *window , GtkWidget *grid, gint left, gint top, gint width, gint height)
+{
+
+    GtkWidget *frame;
+
+    /* Calendar widget */
+    frame = gtk_frame_new ("Pick date");
+//    gtk_widget_set_hexpand (frame, TRUE);
+
+    gtk_grid_attach (GTK_GRID (grid), frame, left, top, width, height);
+
+    calendar = gtk_calendar_new ();
+
+    gtk_container_add (GTK_CONTAINER (frame), calendar);
+
+    gtk_widget_show_all (window);
 }
 
-#define SQLITE_PATH "metrics.db"
+#define SHOW_CONNECT_TIME_BEGIN 1
+#define SHOW_CONNECT_TIME_END (SHOW_CONNECT_TIME_BEGIN + 1)
+#define SHOW_ALL_ROWS (SHOW_CONNECT_TIME_END + 1)
+#define SHOW_LIMIT (SHOW_ALL_ROWS + 1)
 
 static void
 show_measuremetns (GtkWidget *widget,
@@ -136,12 +171,14 @@ show_measuremetns (GtkWidget *widget,
                                 G_TYPE_STRING,
                                 G_TYPE_INT,
                                 G_TYPE_STRING,
-                                G_TYPE_STRING);
+                                G_TYPE_STRING,
+                                G_TYPE_BOOLEAN);
 
     rc = sqlite3_prepare_v2(db, DbQueries::SelectAllMetrics().c_str(), -1, &stmt, 0);
 
     guint year, month, day;
     gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
+
 
     time_t rawtime;
     struct tm * timeinfo;
@@ -151,7 +188,7 @@ show_measuremetns (GtkWidget *widget,
     timeinfo->tm_mon = month - 0;
     timeinfo->tm_mday = day;
     timeinfo->tm_hour = 0;
-    timeinfo->tm_mon = 0;
+    timeinfo->tm_min = 0;
     timeinfo->tm_sec = 0;
 
     rawtime = mktime(timeinfo);
@@ -168,11 +205,16 @@ show_measuremetns (GtkWidget *widget,
     auto tmp2 = std::to_string(static_cast<long int> (rawtime)) + "999";
     auto t2 = tmp2.c_str();
 
-    sqlite3_bind_text(stmt, 1, t1, strlen(t1), SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 2, t2, strlen(t2), SQLITE_STATIC);
+    sqlite3_bind_text(stmt, SHOW_CONNECT_TIME_BEGIN, t1, strlen(t1), SQLITE_STATIC);
+    sqlite3_bind_text(stmt, SHOW_CONNECT_TIME_END, t2, strlen(t2), SQLITE_STATIC);
+
+    if(onlyNonSent)
+        sqlite3_bind_int(stmt, SHOW_ALL_ROWS, 0);
+    else
+        sqlite3_bind_int(stmt, SHOW_ALL_ROWS, 1);
 
     int max = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(maxSpinner));
-    sqlite3_bind_int(stmt, 3, max);
+    sqlite3_bind_int(stmt, SHOW_LIMIT, max);
 
     while (sqlite3_step(stmt) == SQLITE_ROW){
 
@@ -208,6 +250,7 @@ show_measuremetns (GtkWidget *widget,
                             COL_PID, sqlite3_column_int(stmt, COL_PID),
                             COL_CONNECT_TIME, buffer1,
                             COL_DISCONNECT_TIME, buffer2,
+                            COL_SENT, sqlite3_column_int(stmt, COL_SENT) == 0 ? false : true,
                             -1);
 
 
@@ -228,25 +271,6 @@ show_measuremetns (GtkWidget *widget,
 
     sqlite3_close(db);
     g_print ("Done!\n");
-}
-
-
-static void create_calendar( GtkWidget *window , GtkWidget *grid, gint left, gint top, gint width, gint height)
-{
-
-    GtkWidget *frame;
-
-    /* Calendar widget */
-    frame = gtk_frame_new ("Pick date");
-//    gtk_widget_set_hexpand (frame, TRUE);
-
-    gtk_grid_attach (GTK_GRID (grid), frame, left, top, width, height);
-
-    calendar = gtk_calendar_new ();
-
-    gtk_container_add (GTK_CONTAINER (frame), calendar);
-
-    gtk_widget_show_all (window);
 }
 
 static void create_max_spin( GtkWidget *window , GtkWidget *grid, gint left, gint top, gint width, gint height)
@@ -290,6 +314,49 @@ static void create_show_panel(GtkWidget *window, GtkWidget *outsideGrid, gint le
     gtk_container_add (GTK_CONTAINER (frame), ownGrid);
 
     gtk_grid_attach (GTK_GRID (outsideGrid), frame, left, top, width, height);
+
+}
+
+//endregion < Show methods >
+
+static void
+refresh_table (GtkWidget *widget,
+                   gpointer   data)
+{
+
+}
+
+static void
+clean_table (GtkWidget *widget,
+               gpointer   data)
+{
+
+}
+
+static void create_refresh(GtkWidget *window, GtkWidget *outsideGrid, gint left, gint top, gint width, gint height)
+{
+    GtkWidget *ownGrid;
+
+    GtkWidget *refreshButton;
+    GtkWidget *cleanButton;
+
+    ownGrid =  gtk_grid_new();
+
+    refreshButton = gtk_button_new_with_label ("Refresh");
+    g_signal_connect (refreshButton, "clicked", G_CALLBACK (refresh_table), NULL);
+
+    gtk_grid_attach (GTK_GRID (ownGrid), refreshButton, 0, 0, 1, 1);
+
+    cleanButton = gtk_button_new_with_label ("Clean DB");
+    g_signal_connect (refreshButton, "clicked", G_CALLBACK (clean_table), NULL);
+
+    gtk_widget_set_hexpand (refreshButton, TRUE);
+    gtk_widget_set_hexpand (cleanButton, TRUE);
+    gtk_widget_set_hexpand (ownGrid, FALSE);
+
+    gtk_grid_attach (GTK_GRID (ownGrid), cleanButton, 1, 0, 1, 1);
+
+    gtk_grid_attach (GTK_GRID (outsideGrid), ownGrid, left, top, width, height);
 
 }
 
@@ -458,11 +525,30 @@ start_send (GtkWidget *button,
     };
 }
 
+static void
+send_rows (GtkWidget *button,
+            gpointer   data)
+{
+    static pid_t pid = -1;
+    (void)button;/*Avoid compiler warnings*/
+
+    pid = fork();
+    if(pid==0){
+        send_data();
+        g_print ("Send rows done!\n");
+        exit(0);
+    }
+}
+
 static void create_start_sending_panel(GtkWidget *window, GtkWidget *outsideGrid, gint left, gint top, gint width, gint height){
     GtkWidget *frame;
     GtkWidget *ownGrid;
     GtkWidget *startSendButton;
+    GtkWidget *sendButton;
     GtkWidget **timerStatusLabels= new GtkWidget*[2];
+
+    int yCounter = 0;
+
     timerStatusLabels[0] = gtk_label_new("Time elapsed: 0 secs");
     timerStatusLabels[1] = gtk_label_new("Status: Idle");
 
@@ -472,17 +558,31 @@ static void create_start_sending_panel(GtkWidget *window, GtkWidget *outsideGrid
     frame = gtk_frame_new ("Process of sending");
 
 
-    gtk_grid_attach (GTK_GRID (ownGrid), timerStatusLabels[1], 0, 0, 1, 1);
-    gtk_grid_attach (GTK_GRID (ownGrid), timerStatusLabels[0], 0, 1, 1, 1);
+    gtk_grid_attach (GTK_GRID (ownGrid), timerStatusLabels[1], 0, yCounter++, 1, 1);
+    gtk_grid_attach (GTK_GRID (ownGrid), timerStatusLabels[0], 0, yCounter++, 1, 1);
 
+
+    //region SendButton
+    sendButton = gtk_button_new_with_label ("Send 20 rows");
+    g_signal_connect (sendButton, "clicked", G_CALLBACK (send_rows), (gpointer)timerStatusLabels);
+
+    gtk_widget_set_hexpand (sendButton, TRUE);
+
+    gtk_grid_attach (GTK_GRID (ownGrid), sendButton, 0, yCounter++, 1, 1);
+    //endregion SendButton
+
+    //region StartSendButton
     startSendButton = gtk_button_new_with_label ("Start Sending");
     g_signal_connect (startSendButton, "clicked", G_CALLBACK (start_send), (gpointer)timerStatusLabels);
 
-    gtk_widget_set_hexpand (startSendButton, FALSE);
-    gtk_widget_set_vexpand (startSendButton, FALSE);
-    gtk_grid_attach (GTK_GRID (ownGrid), startSendButton, 0, 2, 1, 1);
-
     gtk_widget_set_hexpand (startSendButton, TRUE);
+
+    gtk_grid_attach (GTK_GRID (ownGrid), startSendButton, 0, yCounter++, 1, 1);
+    //endregion StartSendButton
+
+
+
+
     gtk_widget_set_hexpand (ownGrid, FALSE);
 
     gtk_container_add (GTK_CONTAINER (frame), ownGrid);
@@ -495,33 +595,44 @@ static void create_start_sending_panel(GtkWidget *window, GtkWidget *outsideGrid
 
 //endregion
 
-int
-main123 (int argc, char **argv)
-{
-    static GtkWidget *window;
+//region < View + Buttons >
 
-    GtkWidget *grid;
-    GtkWidget *grid2;
+GtkWidget *onlyNonSentButton;
+GtkWidget *allButton;
+bool manual = false;
+
+static void set_toggled_to_table_buttons_all(GtkWidget *widget, gpointer data){
+    if(manual)
+        return;
+    gtk_widget_set_sensitive(widget, FALSE);
+    onlyNonSent = false;
+
+    manual = true;
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(onlyNonSentButton), FALSE);
+    gtk_widget_set_sensitive(onlyNonSentButton, TRUE);
+    manual = false;
+
+}
+
+static void set_toggled_to_table_buttons_only(GtkWidget *widget, gpointer data){
+    if(manual)
+        return;
+    gtk_widget_set_sensitive(widget, FALSE);
+    onlyNonSent = true;
+
+    manual = true;
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(allButton), FALSE);
+    gtk_widget_set_sensitive(allButton, TRUE);
+    manual = false;
+}
+
+static void create_view_boxes(GtkWidget *outsideGrid, gint left, gint top, gint width, gint height){
     GtkWidget *scrolled_window;
-
-    GtkWidget *startSendButton;
-
-
-    gtk_init (&argc, &argv);
-    window = init_window_params();
-
-
     /* create a new scrolled window. */
     scrolled_window = gtk_scrolled_window_new (NULL, NULL);
     gtk_container_set_border_width (GTK_CONTAINER (scrolled_window), 1);
     gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
                                     GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
-
-    grid =  gtk_grid_new();
-    grid2 =  gtk_grid_new();
-    gtk_widget_set_halign (grid,  GTK_ALIGN_FILL);
-    gtk_widget_set_valign (grid,  GTK_ALIGN_FILL);
-    gtk_container_add (GTK_CONTAINER (window), grid);
 
     create_view_and_model ();
 
@@ -530,12 +641,64 @@ main123 (int argc, char **argv)
 
     gtk_container_add (GTK_CONTAINER (scrolled_window), view);
 
-    gtk_grid_attach (GTK_GRID (grid), scrolled_window, 0, 0, 2, 1);
-    gtk_grid_attach (GTK_GRID (grid), grid2, 2, 0, 1, 1);
+    GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 1);
+    GtkWidget *bbox = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
 
-    create_show_panel(window, grid2, 0, 0, 1, 1);
-    create_start_collecting_panel(window, grid2, 0, 1, 1, 1);
-    create_start_sending_panel(window, grid2, 0, 2, 1, 1);
+    gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_CENTER);
+    gtk_box_set_spacing (GTK_BOX (bbox), 1);
+
+
+    onlyNonSentButton =  gtk_toggle_button_new_with_label ("Only not sent");
+    allButton =  gtk_toggle_button_new_with_label ("All metrics");
+
+    g_signal_connect (onlyNonSentButton, "toggled", G_CALLBACK (set_toggled_to_table_buttons_only), NULL);
+    g_signal_connect (allButton, "toggled", G_CALLBACK (set_toggled_to_table_buttons_all), NULL);
+
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(onlyNonSentButton), TRUE);
+
+    gtk_container_add (GTK_CONTAINER (bbox), onlyNonSentButton);
+    gtk_container_add (GTK_CONTAINER (bbox), allButton);
+
+    gtk_box_pack_start(GTK_BOX(box), bbox, FALSE, FALSE, 2);
+    gtk_box_pack_end(GTK_BOX(box), scrolled_window, TRUE, TRUE, 2);
+
+    gtk_grid_attach (GTK_GRID (outsideGrid), box, left, top, width, height);
+
+}
+//endregion < View + Buttons >
+
+
+int
+main (int argc, char **argv)
+{
+    static GtkWidget *window;
+
+    GtkWidget *grid;
+    GtkWidget *grid2;
+    int grid2VC = 0;
+
+    GtkWidget *startSendButton;
+
+
+    gtk_init (&argc, &argv);
+    window = init_window_params();
+
+
+    grid =  gtk_grid_new();
+    grid2 =  gtk_grid_new();
+    gtk_widget_set_halign (grid,  GTK_ALIGN_FILL);
+    gtk_widget_set_valign (grid,  GTK_ALIGN_FILL);
+    gtk_container_add (GTK_CONTAINER (window), grid);
+
+
+    create_view_boxes(grid, 1, 0, 2, 1);
+
+    gtk_grid_attach (GTK_GRID (grid), grid2, 0, 0, 1, 1);
+
+    create_refresh(window, grid2, 0, grid2VC++, 1, 1);
+    create_show_panel(window, grid2, 0, grid2VC++, 1, 1);
+    create_start_collecting_panel(window, grid2, 0, grid2VC++, 1, 1);
+    create_start_sending_panel(window, grid2, 0, grid2VC++, 1, 1);
 
 
 
