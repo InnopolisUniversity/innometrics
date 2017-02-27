@@ -30,6 +30,7 @@ class CollectorController: NSObject {
     private var isPaused: Bool = false
     
     private var isCollectingBrowserInfo: Bool = false
+    private var isCollecting: Bool = true
     
     private let browsersId: [String] = ["org.chromium.Chromium", "com.google.Chrome.canary", "com.google.Chrome", "com.apple.Safari"]
     
@@ -61,16 +62,18 @@ class CollectorController: NSObject {
         DistributedNotificationCenter.default().addObserver(self, selector: #selector(dbChangeBegin), name: startChangingDbNotificationName, object: transferAppIdentifier)
         DistributedNotificationCenter.default().addObserver(self, selector: #selector(dbChangeEnd), name: endChangingDbNotificationName, object: transferAppIdentifier)
         
+        NSWorkspace.shared().notificationCenter.addObserver(self, selector: #selector(applicationSwitchTriggered), name: NSNotification.Name.NSWorkspaceDidActivateApplication, object: nil)
+        
         startMetricCollection()
     }
     
     func startMetricCollection() {
-        NSWorkspace.shared().notificationCenter.addObserver(self, selector: #selector(applicationSwitchTriggered), name: NSNotification.Name.NSWorkspaceDidActivateApplication, object: nil)
+        isCollecting = true
         handleApplicationSwitch()
     }
     
     func stopMetricCollection() {
-        NSWorkspace.shared().notificationCenter.removeObserver(self)
+        isCollecting = false
         isCollectingBrowserInfo = false
         setEndTimeOfPrevMetric()
     }
@@ -80,6 +83,10 @@ class CollectorController: NSObject {
     }
     
     func handleApplicationSwitch() {
+        if (!isCollecting) {
+            return
+        }
+        
         let fronmostApp = NSWorkspace.shared().frontmostApplication
         if (fronmostApp == nil) {
             return
@@ -259,7 +266,7 @@ class CollectorController: NSObject {
     func dbChangeBegin() {
         pausePlayBtn.isEnabled = false
         
-        NSWorkspace.shared().notificationCenter.removeObserver(self)
+        isCollecting = false
         if (!isPaused) {
             currentWorkingApplicationView.pauseTime()
             pausePlayBtn.image = #imageLiteral(resourceName: "playIcon")
@@ -274,11 +281,11 @@ class CollectorController: NSObject {
         prevMetric = nil
         
         pausePlayBtn.isEnabled = true
+        startMetricCollection()
         if (!isPaused) {
             pausePlayBtn.image = #imageLiteral(resourceName: "pauseIcon")
             pausePlayLabel.stringValue = "Pause"
             isPaused = false
-            startMetricCollection()
         }
     }
     
@@ -294,5 +301,9 @@ class CollectorController: NSObject {
         } else {
             NSLog("Failed to add login item.")
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
