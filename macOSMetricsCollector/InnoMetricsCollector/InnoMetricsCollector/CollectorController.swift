@@ -281,8 +281,8 @@ class CollectorController: NSObject {
         prevMetric = nil
         
         pausePlayBtn.isEnabled = true
-        startMetricCollection()
         if (!isPaused) {
+            startMetricCollection()
             pausePlayBtn.image = #imageLiteral(resourceName: "pauseIcon")
             pausePlayLabel.stringValue = "Pause"
             isPaused = false
