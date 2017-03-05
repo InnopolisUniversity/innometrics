@@ -1,0 +1,6 @@
+framework module Pods_InnoMetricsCollector {
+  umbrella header "Pods-InnoMetricsCollector-umbrella.h"
+
+  export *
+  module * { export * }
+}

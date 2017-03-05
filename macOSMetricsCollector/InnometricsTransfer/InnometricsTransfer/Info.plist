@@ -28,9 +28,15 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUAllowsAutomaticUpdates</key>
+	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
 	<key>SUFeedURL</key>
-	<string>https://www.dropbox.com/s/wwx87me2ovatdqi/appcast.xml?dl=1</string>
+	<string>https://www.dropbox.com/s/8p4h60tgtj5z2hb/appcast.xml?dl=1</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>SUScheduledCheckInterval</key>
+	<integer>3600</integer>
 </dict>
 </plist>

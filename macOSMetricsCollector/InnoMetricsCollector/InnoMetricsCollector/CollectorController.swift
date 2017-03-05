@@ -24,11 +24,13 @@ class CollectorController: NSObject {
     @IBOutlet weak var pausePlayLabel: NSTextField!
     
     private var currentSession: Session!
-    private var metrics: [Metric] = []
+    private var currentMetric: Metric?
+    private var prevMetric: Metric?
     private var context: NSManagedObjectContext!
     private var isPaused: Bool = false
     
     private var isCollectingBrowserInfo: Bool = false
+    private var isCollecting: Bool = true
     
     private let browsersId: [String] = ["org.chromium.Chromium", "com.google.Chrome.canary", "com.google.Chrome", "com.apple.Safari"]
     
@@ -53,16 +55,25 @@ class CollectorController: NSObject {
         let appDelegate = NSApplication.shared().delegate as! AppDelegate
         context = appDelegate.managedObjectContext
         
+        let transferAppIdentifier = "com.denzap.InnometricsTransfer"
+        let startChangingDbNotificationName = Notification.Name("db_start_changing")
+        let endChangingDbNotificationName = Notification.Name("db_end_changing")
+        
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(dbChangeBegin), name: startChangingDbNotificationName, object: transferAppIdentifier)
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(dbChangeEnd), name: endChangingDbNotificationName, object: transferAppIdentifier)
+        
+        NSWorkspace.shared().notificationCenter.addObserver(self, selector: #selector(applicationSwitchTriggered), name: NSNotification.Name.NSWorkspaceDidActivateApplication, object: nil)
+        
         startMetricCollection()
     }
     
     func startMetricCollection() {
-        NSWorkspace.shared().notificationCenter.addObserver(self, selector: #selector(applicationSwitchTriggered), name: NSNotification.Name.NSWorkspaceDidActivateApplication, object: nil)
+        isCollecting = true
         handleApplicationSwitch()
     }
     
     func stopMetricCollection() {
-        NSWorkspace.shared().notificationCenter.removeObserver(self)
+        isCollecting = false
         isCollectingBrowserInfo = false
         setEndTimeOfPrevMetric()
     }
@@ -72,6 +83,10 @@ class CollectorController: NSObject {
     }
     
     func handleApplicationSwitch() {
+        if (!isCollecting) {
+            return
+        }
+        
         let fronmostApp = NSWorkspace.shared().frontmostApplication
         if (fronmostApp == nil) {
             return
@@ -110,8 +125,8 @@ class CollectorController: NSObject {
                     
                     let foregroundWindowTabUrl = BrowserInfoUtils.activeTabURL(bundleIdentifier: foregroundWindowBundleId!)
                     
-                    if (self.metrics.count > 0) {
-                        if (foregroundWindowTabUrl == self.metrics[0].tabUrl) {
+                    if (self.prevMetric != nil) {
+                        if (foregroundWindowTabUrl == self.prevMetric!.tabUrl) {
                             continue
                         }
                     }
@@ -152,21 +167,24 @@ class CollectorController: NSObject {
             if (foregroundWindowTabTitle != nil) {
                 metric.tabName = foregroundWindowTabTitle!
             }
-            self.metrics.insert(metric, at: 0)
+            prevMetric = currentMetric
+            currentMetric = metric//self.metrics.insert(metric, at: 0)
         }
         
         do {
             try self.context.save()
-            self.metrics.insert(metric, at: 0)
+            prevMetric = currentMetric
+            currentMetric = metric
+            //self.metrics.insert(metric, at: 0)
         } catch {
             print("An error occurred")
         }
     }
     
     func setEndTimeOfPrevMetric() {
-        if metrics.count > 0 {
-            if (metrics[0].timestampEnd == nil) {
-                let metric = metrics[0]
+        if currentMetric != nil {
+            if (currentMetric!.timestampEnd == nil) {
+                let metric = currentMetric!
                 let endTime = NSDate()
                 metric.timestampEnd = endTime
                 
@@ -236,13 +254,38 @@ class CollectorController: NSObject {
             pausePlayLabel.stringValue = "Pause"
             isPaused = false
             startMetricCollection()
-            handleApplicationSwitch()
         } else {
             currentWorkingApplicationView.pauseTime()
             pausePlayBtn.image = #imageLiteral(resourceName: "playIcon")
             pausePlayLabel.stringValue = "Start"
             isPaused = true
             stopMetricCollection()
+        }
+    }
+    
+    func dbChangeBegin() {
+        pausePlayBtn.isEnabled = false
+        
+        isCollecting = false
+        if (!isPaused) {
+            currentWorkingApplicationView.pauseTime()
+            pausePlayBtn.image = #imageLiteral(resourceName: "playIcon")
+            pausePlayLabel.stringValue = "Start"
+        }
+    }
+    
+    func dbChangeEnd() {
+        context.reset()
+        currentSession = nil
+        currentMetric = nil
+        prevMetric = nil
+        
+        pausePlayBtn.isEnabled = true
+        if (!isPaused) {
+            startMetricCollection()
+            pausePlayBtn.image = #imageLiteral(resourceName: "pauseIcon")
+            pausePlayLabel.stringValue = "Pause"
+            isPaused = false
         }
     }
     
@@ -258,5 +301,9 @@ class CollectorController: NSObject {
         } else {
             NSLog("Failed to add login item.")
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }

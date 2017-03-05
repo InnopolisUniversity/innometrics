@@ -7,28 +7,35 @@
 //
 
 import Cocoa
-import SQLite
 
 class MainController: NSViewController {
-
-    private var metrics: [Metric] = []
-    private var sessions: [Session] = []
+    @IBOutlet weak var spinnerView: NSProgressIndicator!
     
+    @IBOutlet weak var fromDateCheckBox: NSButton!
     @IBOutlet weak var fromDate: NSDatePicker!
+    @IBOutlet weak var toDateCheckBox: NSButton!
     @IBOutlet weak var toDate: NSDatePicker!
     
     @IBOutlet weak var keywordsTableView: NSTableView!
     @IBOutlet var keywordsArrayController: NSArrayController!
     dynamic var keywordsArray: Array<Keyword> = []
     private var prefsKeywordsArray: [String] = []
+    @IBOutlet weak var removeKeywordBtn: NSButton!
+    @IBOutlet weak var addKeywordBtn: NSButton!
     
     @IBOutlet weak var appsTableView: NSTableView!
     @IBOutlet var appsArrayController: NSArrayController!
     dynamic var appsArray: Array<Application> = []
     private var prefsAppsArray: [String] = []
+    @IBOutlet weak var addAppBtn: NSButton!
+    @IBOutlet weak var removeAppBtn: NSButton!
     
-    private var allMetricsController: AllMetricsController!
-    private var newMetricsController: NewMetricsController!
+    @IBOutlet weak var sendMetricsBtn: NSButton!
+    @IBOutlet weak var refreshTableBtn: NSButton!
+    @IBOutlet weak var clearDBBtn: NSButton!
+    
+    @IBOutlet weak var lastTableRefreshTextField: NSTextField!
+    private var metricsController: MetricsController!
     
     override func viewDidAppear() {
         self.view.window?.titleVisibility = .hidden
@@ -36,6 +43,11 @@ class MainController: NSViewController {
         self.view.window?.isMovableByWindowBackground = true
         self.view.window?.backgroundColor = NSColor.gray
         self.view.window?.styleMask = [(self.view.window?.styleMask)!, NSFullSizeContentViewWindowMask]
+        
+        let window = NSApplication.shared().windows[0]
+        if let screen = NSScreen.main() {
+            window.setFrame(screen.visibleFrame, display: true, animate: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -53,13 +65,22 @@ class MainController: NSViewController {
             appsArray.append(Application(application: app))
         }
         
+        if (UserPrefs.isNeedFromDateFilter()) {
+            fromDateCheckBox.state = NSOnState
+        }
+        if (UserPrefs.isNeedToDateFilter()) {
+            toDateCheckBox.state = NSOnState
+        }
         
-        fromDate.dateValue = NSDate() as Date
-        toDate.dateValue = NSDate() as Date
+        fromDate.dateValue = UserPrefs.getExludedFromDate() as Date
+        toDate.dateValue = UserPrefs.getExludedToDate() as Date
         
         self.keywordsArrayController.addObserver(self, forKeyPath: "arrangedObjects.keyword", options: .new, context: nil)
         self.appsArrayController.addObserver(self, forKeyPath: "arrangedObjects.application", options: .new, context: nil)
 
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
+        lastTableRefreshTextField.stringValue = "Last update: \(dateFormatter.string(from: Date()))"
     }
 
     override var representedObject: Any? {
@@ -69,27 +90,24 @@ class MainController: NSViewController {
     }
     
     @IBAction func refreshMetricsTables(_ sender: AnyObject) {
-        allMetricsController.fetchAllMetricsAndRefreshTable()
-        newMetricsController.fetchNewMetricsAndRefreshTable()
+        metricsController.fetchNewMetricsAndRefreshTable()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
+        lastTableRefreshTextField.stringValue = "Last update: \(dateFormatter.string(from: Date()))"
     }
     
     @IBAction func clearDataBase(_ sender: AnyObject) {
-        do {
-            let urls = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)
-            let appSupportURL = urls[urls.count - 1]
-            let dbPath = appSupportURL.appendingPathComponent("com.apple.toolsQA.CocoaApp_CD").appendingPathComponent("InnoMetricsCollector.storedata")
-            
-            let db = try Connection(dbPath.absoluteString)
-            
-            let metricsTable = Table("ZMETRIC")
-            let sessionTable = Table("ZSESSION")
-            try db.run(metricsTable.delete())
-            try db.run(sessionTable.delete())
-            
-            newMetricsController.fetchNewMetricsAndRefreshTable()
-            allMetricsController.fetchAllMetricsAndRefreshTable()
-        } catch {
-            print (error)
+        
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "Would you like to delete metrics data and clear the local database?"
+        alert.informativeText = "This action cannot be undone."
+        alert.alertStyle = NSAlertStyle.critical
+        alert.addButton(withTitle: "Delete")
+        alert.addButton(withTitle: "Cancel")
+        
+        let answer = alert.runModal()
+        if answer == NSAlertFirstButtonReturn {
+            clearDatabase()
         }
     }
     
@@ -106,9 +124,11 @@ class MainController: NSViewController {
    
     @IBAction func removeKeywordsButtonClicked(_ sender: AnyObject) {
         if let selectedKeyword = keywordsArrayController.selectedObjects.first as? Keyword {
-            prefsKeywordsArray.remove(at: keywordsTableView.selectedRow)
-            keywordsArrayController.removeObject(selectedKeyword)
-            UserPrefs.saveUserExludedKeywords(keywords: prefsKeywordsArray)
+            if (keywordsTableView.selectedRow >= 0) {
+                prefsKeywordsArray.remove(at: keywordsTableView.selectedRow)
+                keywordsArrayController.removeObject(selectedKeyword)
+                UserPrefs.saveUserExludedKeywords(keywords: prefsKeywordsArray)
+            }
         }
     }
     
@@ -125,17 +145,17 @@ class MainController: NSViewController {
     
     @IBAction func removeAppsButtonClicked(_ sender: AnyObject) {
         if let selectedApp = appsArrayController.selectedObjects.first as? Application {
-            prefsAppsArray.remove(at: appsTableView.selectedRow)
-            appsArrayController.removeObject(selectedApp)
-            UserPrefs.saveUserExludedApps(apps: prefsAppsArray)
+            if (appsTableView.selectedRow >= 0) {
+                prefsAppsArray.remove(at: appsTableView.selectedRow)
+                appsArrayController.removeObject(selectedApp)
+                UserPrefs.saveUserExludedApps(apps: prefsAppsArray)
+            }
         }
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MetricsTabSegue" {
-            let barViewControllers = segue.destinationController as! NSTabViewController
-            newMetricsController = barViewControllers.childViewControllers[0] as! NewMetricsController
-            allMetricsController = barViewControllers.childViewControllers[1] as! AllMetricsController
+        if segue.identifier == "MetricsController" {
+            metricsController = segue.destinationController as! MetricsController
         }
     }
     
@@ -148,7 +168,7 @@ class MainController: NSViewController {
             }
             UserPrefs.saveUserExludedKeywords(keywords: prefsKeywordsArray)
         
-            newMetricsController.fetchNewMetricsAndRefreshTable()
+            metricsController.fetchNewMetricsAndRefreshTable()
         } else if keyPath == "arrangedObjects.application" {
             prefsAppsArray = []
             for app in appsArray {
@@ -156,70 +176,144 @@ class MainController: NSViewController {
             }
             UserPrefs.saveUserExludedApps(apps: prefsAppsArray)
             
-            newMetricsController.fetchNewMetricsAndRefreshTable()
+            metricsController.fetchNewMetricsAndRefreshTable()
+        }
+    }
+    
+    @IBAction func fromDateFilterChanged(_ sender: AnyObject) {
+        UserPrefs.saveExludedFromDate(date: fromDate.dateValue as NSDate)
+        if (fromDateCheckBox.state == NSOnState) {
+            metricsController.fetchNewMetricsAndRefreshTable()
+        }
+    }
+    
+    @IBAction func toDateFilterChanged(_ sender: AnyObject) {
+        UserPrefs.saveExludedToDate(date: toDate.dateValue as NSDate)
+        if (toDateCheckBox.state == NSOnState) {
+            metricsController.fetchNewMetricsAndRefreshTable()
         }
     }
     
     @IBAction func sendMetricsBtnClicked(_ sender: AnyObject) {
-        newMetricsController.sendMetrics()
+        if metricsController.metrics.count == 0 {
+            dialogOKCancel(question: "Warning", text: "There are no metrics data to send.")
+            return
+        }
+        
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "Would you like to send metrics to the remote server?"
+        alert.informativeText = "All metrics that you see on the screen would be send to the remote server."
+        alert.alertStyle = NSAlertStyle.warning
+        alert.addButton(withTitle: "Send")
+        alert.addButton(withTitle: "Cancel")
+        
+        let answer = alert.runModal()
+        if answer == NSAlertFirstButtonReturn {
+            disableAllElements()
+            spinnerView.isHidden = false
+            spinnerView.startAnimation(self)
+        
+            metricsController.sendMetrics() { (response) in
+                DispatchQueue.main.async {
+                    self.enableAllElements()
+                    self.spinnerView.stopAnimation(self)
+                    self.spinnerView.isHidden = true
+                    if (response == 1) {
+                        self.clearDatabase()
+                        self.dialogOKCancel(question: "Success", text: "Data have been sent successfully.")
+                    } else {
+                        self.dialogOKCancel(question: "Error", text: "Something went wrong during sending.")
+                    }
+                }
+            }
+        }
     }
     
-     func excludeBtnPressed(_ sender: NSButton) {
-        /*metrics = []
+    @IBAction func fromDateFilterChecked(_ sender: AnyObject) {
+        UserPrefs.saveNeedFromDateFilter(isNeeded: fromDateCheckBox.state == NSOnState)
+        metricsController.fetchNewMetricsAndRefreshTable()
+    }
+    
+    @IBAction func toDateFilterChecked(_ sender: AnyObject) {
+        UserPrefs.saveNeedToDateFilter(isNeeded: toDateCheckBox.state == NSOnState)
+        metricsController.fetchNewMetricsAndRefreshTable()
+    }
+    
+    func clearDatabase() {
+        let startChangingDbNotificationName = Notification.Name("db_start_changing")
+        let endChangingDbNotificationName = Notification.Name("db_end_changing")
+        DistributedNotificationCenter.default().postNotificationName(startChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
         do {
-            let urls = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)
-            let appSupportURL = urls[urls.count - 1]
-            let dbPath = appSupportURL.appendingPathComponent("com.apple.toolsQA.CocoaApp_CD").appendingPathComponent("InnoMetricsTestApp.sqlite")
+            let appDelegate = NSApplication.shared().delegate as! AppDelegate
+            let context = appDelegate.managedObjectContext
             
-            let db = try Connection(dbPath.absoluteString)
+            let metricsFetch: NSFetchRequest<Metric> = Metric.fetchRequest()
+            metricsFetch.includesPropertyValues = false
+            let metricsToDelete = try context.fetch(metricsFetch as! NSFetchRequest<NSFetchRequestResult>) as! [NSManagedObject]
             
-            let metricsTable = Table("ZMETRIC")
-            let timestampEndColumn = Expression<Double?>("ZTIMESTAMPEND")
-            let timestampStartColumn = Expression<Double>("ZTIMESTAMPSTART")
-            let appNameColumn = Expression<String>("ZAPPNAME")
-            let bundleIdentifierColumn = Expression<String>("ZBUNDLEIDENTIFIER")
-            let bundleURLColumn = Expression<String>("ZBUNDLEURL")
-            let durationColumn = Expression<Double?>("ZDURATION")
-            let tabNameColumn = Expression<String?>("ZTABNAME")
-            let tabUrlColumn = Expression<String?>("ZTABURL")
-            //let session: Session?
-            //timestampStartColumn > fromDate.dateValue.timeIntervalSinceReferenceDate
-            
-            let timeWhereSql = timestampEndColumn < fromDate.dateValue.timeIntervalSinceReferenceDate || timestampStartColumn > toDate.dateValue.timeIntervalSinceReferenceDate
-            
-            var appNameWhereSql = appNameColumn.like("%")
-            let appNames = apps.stringValue.components(separatedBy: ", ")
-            if (apps.stringValue != "") {
-                for appName in appNames {
-                    appNameWhereSql = appNameWhereSql && !appNameColumn.like("%" + appName + "%")
-                }
+            for metric in metricsToDelete {
+                context.delete(metric)
             }
             
-            var keywordsWhereSql = appNameColumn.like("%") && bundleIdentifierColumn.like("%")  && bundleURLColumn.like("%") && (tabNameColumn.like("%") || tabNameColumn == nil)  && (tabUrlColumn.like("%") || tabUrlColumn == nil)
-            let keywordsValues = keywords.stringValue.components(separatedBy: ", ")
-            if (keywords.stringValue != "") {
-                for keyword in keywordsValues {
-                    keywordsWhereSql = keywordsWhereSql && !appNameColumn.like("%" + keyword + "%") && !bundleIdentifierColumn.like("%" + keyword + "%") && !bundleURLColumn.like("%" + keyword + "%") && (!tabNameColumn.like("%" + keyword + "%") || tabNameColumn == nil) && (!tabUrlColumn.like("%" + keyword + "%") || tabUrlColumn == nil)
-                }
+            let sessionsFetch: NSFetchRequest<Session> = Session.fetchRequest()
+            sessionsFetch.includesPropertyValues = false
+            let sessionsToDelete = try context.fetch(sessionsFetch as! NSFetchRequest<NSFetchRequestResult>) as! [NSManagedObject]
+            
+            for session in sessionsToDelete {
+                context.delete(session)
             }
             
-            for row in try db.prepare(metricsTable.filter(timeWhereSql && appNameWhereSql && keywordsWhereSql)) {
-                let metric: Metric = Metric()
-                metric.appName = row[appNameColumn]
-                metric.bundleIdentifier = row[bundleIdentifierColumn]
-                metric.bundleURL = row[bundleURLColumn]
-                metric.duration = row[durationColumn]
-                metric.tabName = row[tabNameColumn]
-                metric.tabUrl = row[tabUrlColumn]
-                if (row[timestampEndColumn] != nil) {
-                    metric.timestampEnd = NSDate(timeIntervalSinceReferenceDate:row[timestampEndColumn]!)
-                }
-                metric.timestampStart = NSDate(timeIntervalSinceReferenceDate:row[timestampStartColumn])
-                metrics.insert(metric, at: 0)
-            }
+            // Save Changes
+            try context.save()
+            
+            metricsController.fetchNewMetricsAndRefreshTable()
         } catch {
+            print (error)
         }
-        metricsTableView.reloadData()*/
+        DistributedNotificationCenter.default().postNotificationName(endChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
+    }
+    
+    func disableAllElements() {
+        fromDateCheckBox.isEnabled = false
+        fromDate.isEnabled = false
+        toDateCheckBox.isEnabled = false
+        toDate.isEnabled = false
+        keywordsTableView.isEnabled = false
+        removeKeywordBtn.isEnabled = false
+        addKeywordBtn.isEnabled = false
+        appsTableView.isEnabled = false
+        addAppBtn.isEnabled = false
+        removeAppBtn.isEnabled = false
+        sendMetricsBtn.isEnabled = false
+        refreshTableBtn.isEnabled = false
+        clearDBBtn.isEnabled = false
+        metricsController.newMetricsTableView.isEnabled = false
+    }
+    
+    func enableAllElements() {
+        fromDateCheckBox.isEnabled = true
+        fromDate.isEnabled = true
+        toDateCheckBox.isEnabled = true
+        toDate.isEnabled = true
+        keywordsTableView.isEnabled = true
+        removeKeywordBtn.isEnabled = true
+        addKeywordBtn.isEnabled = true
+        appsTableView.isEnabled = true
+        addAppBtn.isEnabled = true
+        removeAppBtn.isEnabled = true
+        sendMetricsBtn.isEnabled = true
+        refreshTableBtn.isEnabled = true
+        clearDBBtn.isEnabled = true
+        metricsController.newMetricsTableView.isEnabled = true
+    }
+    
+    func dialogOKCancel(question: String, text: String) {
+        let myPopup: NSAlert = NSAlert()
+        myPopup.messageText = question
+        myPopup.informativeText = text
+        myPopup.alertStyle = NSAlertStyle.informational
+        myPopup.addButton(withTitle: "OK")
+        myPopup.runModal()
     }
     
     private func stringFromTimeInterval(interval: TimeInterval) -> NSString {

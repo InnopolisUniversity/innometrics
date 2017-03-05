@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0469F6EBCFB35DE0A73F846CDF1ECB8A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		CFB4C8FE9E0D0B6946D5DFEAB3D0FBC4 /* Pods-InnoMetricsCollector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B4DBDB8C1790E6E68E8E0F0422CD63 /* Pods-InnoMetricsCollector-dummy.m */; };
+		FC1745E468C22865E782F215535443F3 /* Pods-InnoMetricsCollector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C936ABAF50B7710327C1A5FDFC8E01FE /* Pods-InnoMetricsCollector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03FB5EC62E3162AC6AB5842D3583DED5 /* Pods-InnoMetricsCollector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-InnoMetricsCollector.modulemap"; sourceTree = "<group>"; };
+		08F0E3ABE0F7FFF0B060E49C18859B20 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		098E6864A7B900C354092929510F6742 /* SUExport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUExport.h; path = Sparkle.framework/Versions/A/Headers/SUExport.h; sourceTree = "<group>"; };
+		146EB1FFD3039CBBC121466BC10E749F /* SUVersionComparisonProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionComparisonProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionComparisonProtocol.h; sourceTree = "<group>"; };
+		1A7E4471AF46585E1A542DC6E8BA1D84 /* Pods-InnoMetricsCollector-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InnoMetricsCollector-resources.sh"; sourceTree = "<group>"; };
+		206FC0298653B913F6DE0E15DF72023A /* SUAppcastItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcastItem.h; path = Sparkle.framework/Versions/A/Headers/SUAppcastItem.h; sourceTree = "<group>"; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2A68FB6161EB6D13E0025D572C32A5C8 /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionDisplayProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
+		32340E8F589561F669BF03192E408C88 /* Pods_InnoMetricsCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InnoMetricsCollector.framework; path = "Pods-InnoMetricsCollector.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3359C47806FF45901D720684C59348A0 /* Pods-InnoMetricsCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InnoMetricsCollector.debug.xcconfig"; sourceTree = "<group>"; };
+		44B4DBDB8C1790E6E68E8E0F0422CD63 /* Pods-InnoMetricsCollector-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InnoMetricsCollector-dummy.m"; sourceTree = "<group>"; };
+		5AE33B96BE85E458DD3367FED84DFC7A /* Pods-InnoMetricsCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InnoMetricsCollector.release.xcconfig"; sourceTree = "<group>"; };
+		7A10D3C85E13F799F7902255256AEF5D /* Pods-InnoMetricsCollector-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InnoMetricsCollector-acknowledgements.markdown"; sourceTree = "<group>"; };
+		90E75E9DC7A922B4F94EA6E11741D6A8 /* SUErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUErrors.h; path = Sparkle.framework/Versions/A/Headers/SUErrors.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A481C3CBFAEDB2BDC2DB39C4403CB01 /* Pods-InnoMetricsCollector-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InnoMetricsCollector-frameworks.sh"; sourceTree = "<group>"; };
+		9A93315493FF4BAB2D4871AF76260F08 /* Pods-InnoMetricsCollector-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InnoMetricsCollector-acknowledgements.plist"; sourceTree = "<group>"; };
+		BE06FF81E8B47CAE2929E9997A0FDD00 /* SUUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdaterDelegate.h; path = Sparkle.framework/Versions/A/Headers/SUUpdaterDelegate.h; sourceTree = "<group>"; };
+		C2C9D1B34A27BA4F6CC2A7CE29DF23D1 /* SUUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdater.h; path = Sparkle.framework/Versions/A/Headers/SUUpdater.h; sourceTree = "<group>"; };
+		C936ABAF50B7710327C1A5FDFC8E01FE /* Pods-InnoMetricsCollector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InnoMetricsCollector-umbrella.h"; sourceTree = "<group>"; };
+		CFC2150FE91499A0C52A00AED7BC2471 /* Sparkle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sparkle.h; path = Sparkle.framework/Versions/A/Headers/Sparkle.h; sourceTree = "<group>"; };
+		D694B684EDBB2873614416D3B14D10AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDCF64026B6B952731DC763935DBB677 /* SUAppcast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcast.h; path = Sparkle.framework/Versions/A/Headers/SUAppcast.h; sourceTree = "<group>"; };
+		F8ACA9546912BB31E3554E432CC1AA43 /* SUStandardVersionComparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUStandardVersionComparator.h; path = Sparkle.framework/Versions/A/Headers/SUStandardVersionComparator.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07D84DEF2649AA1AE749AD05989D0E72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0469F6EBCFB35DE0A73F846CDF1ECB8A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C068A18C5413F804A2959126093416 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52BE0B860AE7DF78013296BFE3FEA4CD /* Pods-InnoMetricsCollector */ = {
+			isa = PBXGroup;
+			children = (
+				D694B684EDBB2873614416D3B14D10AD /* Info.plist */,
+				03FB5EC62E3162AC6AB5842D3583DED5 /* Pods-InnoMetricsCollector.modulemap */,
+				7A10D3C85E13F799F7902255256AEF5D /* Pods-InnoMetricsCollector-acknowledgements.markdown */,
+				9A93315493FF4BAB2D4871AF76260F08 /* Pods-InnoMetricsCollector-acknowledgements.plist */,
+				44B4DBDB8C1790E6E68E8E0F0422CD63 /* Pods-InnoMetricsCollector-dummy.m */,
+				9A481C3CBFAEDB2BDC2DB39C4403CB01 /* Pods-InnoMetricsCollector-frameworks.sh */,
+				1A7E4471AF46585E1A542DC6E8BA1D84 /* Pods-InnoMetricsCollector-resources.sh */,
+				C936ABAF50B7710327C1A5FDFC8E01FE /* Pods-InnoMetricsCollector-umbrella.h */,
+				3359C47806FF45901D720684C59348A0 /* Pods-InnoMetricsCollector.debug.xcconfig */,
+				5AE33B96BE85E458DD3367FED84DFC7A /* Pods-InnoMetricsCollector.release.xcconfig */,
+			);
+			name = "Pods-InnoMetricsCollector";
+			path = "Target Support Files/Pods-InnoMetricsCollector";
+			sourceTree = "<group>";
+		};
+		6C4A8D6723EA64B63D81821C58551253 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DA37F5FD06B7D9792753E9152A8621A /* Sparkle */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7636C916D0D15B76B31A3CB03477E277 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52BE0B860AE7DF78013296BFE3FEA4CD /* Pods-InnoMetricsCollector */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DA37F5FD06B7D9792753E9152A8621A /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				CFC2150FE91499A0C52A00AED7BC2471 /* Sparkle.h */,
+				EDCF64026B6B952731DC763935DBB677 /* SUAppcast.h */,
+				206FC0298653B913F6DE0E15DF72023A /* SUAppcastItem.h */,
+				90E75E9DC7A922B4F94EA6E11741D6A8 /* SUErrors.h */,
+				098E6864A7B900C354092929510F6742 /* SUExport.h */,
+				F8ACA9546912BB31E3554E432CC1AA43 /* SUStandardVersionComparator.h */,
+				C2C9D1B34A27BA4F6CC2A7CE29DF23D1 /* SUUpdater.h */,
+				BE06FF81E8B47CAE2929E9997A0FDD00 /* SUUpdaterDelegate.h */,
+				146EB1FFD3039CBBC121466BC10E749F /* SUVersionComparisonProtocol.h */,
+				2A68FB6161EB6D13E0025D572C32A5C8 /* SUVersionDisplayProtocol.h */,
+				B51F172CB8B6401B0613A2D3DBE6BB0B /* Frameworks */,
+			);
+			name = Sparkle;
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				6C4A8D6723EA64B63D81821C58551253 /* Pods */,
+				EF99FB72FE6AD2E36B5350D07F420550 /* Products */,
+				7636C916D0D15B76B31A3CB03477E277 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B51F172CB8B6401B0613A2D3DBE6BB0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08F0E3ABE0F7FFF0B060E49C18859B20 /* Sparkle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF99FB72FE6AD2E36B5350D07F420550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32340E8F589561F669BF03192E408C88 /* Pods_InnoMetricsCollector.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		984172BA5742DDDFD1FD6156C06EEB6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC1745E468C22865E782F215535443F3 /* Pods-InnoMetricsCollector-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DD10146D632A8FC690AFBB0A24C649F5 /* Pods-InnoMetricsCollector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C793FB1376B9F0288C9CBAC368EB2674 /* Build configuration list for PBXNativeTarget "Pods-InnoMetricsCollector" */;
+			buildPhases = (
+				2705DA47856B8C989D69FCF49CF47607 /* Sources */,
+				07D84DEF2649AA1AE749AD05989D0E72 /* Frameworks */,
+				984172BA5742DDDFD1FD6156C06EEB6D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-InnoMetricsCollector";
+			productName = "Pods-InnoMetricsCollector";
+			productReference = 32340E8F589561F669BF03192E408C88 /* Pods_InnoMetricsCollector.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EF99FB72FE6AD2E36B5350D07F420550 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD10146D632A8FC690AFBB0A24C649F5 /* Pods-InnoMetricsCollector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2705DA47856B8C989D69FCF49CF47607 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB4C8FE9E0D0B6946D5DFEAB3D0FBC4 /* Pods-InnoMetricsCollector-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3C8B0212634E9F4240DD0BA70D4AF3EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE33B96BE85E458DD3367FED84DFC7A /* Pods-InnoMetricsCollector.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-InnoMetricsCollector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-InnoMetricsCollector/Pods-InnoMetricsCollector.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_InnoMetricsCollector;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9420A7205B8F85520AF134F4EE25F7CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A039CECDB3228A13B7C315F2562226D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3359C47806FF45901D720684C59348A0 /* Pods-InnoMetricsCollector.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-InnoMetricsCollector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-InnoMetricsCollector/Pods-InnoMetricsCollector.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_InnoMetricsCollector;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F653E316AB5F825D3AD0CAE700E37071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F653E316AB5F825D3AD0CAE700E37071 /* Debug */,
+				9420A7205B8F85520AF134F4EE25F7CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C793FB1376B9F0288C9CBAC368EB2674 /* Build configuration list for PBXNativeTarget "Pods-InnoMetricsCollector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A039CECDB3228A13B7C315F2562226D4 /* Debug */,
+				3C8B0212634E9F4240DD0BA70D4AF3EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
