@@ -36,6 +36,7 @@ CMakeFiles/InnoMetrics.dir/main.cpp.o
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/updater_demon_main.h
  /usr/include/atk-1.0/atk/atk-enum-types.h
  /usr/include/atk-1.0/atk/atk.h
  /usr/include/atk-1.0/atk/atkaction.h

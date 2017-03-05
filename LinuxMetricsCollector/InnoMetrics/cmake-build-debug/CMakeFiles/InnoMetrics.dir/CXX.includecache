@@ -153,6 +153,8 @@ memory
 -
 unordered_map
 -
+csignal
+-
 X11/Xlib.h
 -
 WindowInfo.h
@@ -187,6 +189,8 @@ Sources/measurements_main.h
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h
 send_demon_main.h
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h
+updater_demon_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/updater_demon_main.h
 memory
 -
 
@@ -201,6 +205,24 @@ chrono
 -
 sstream
 -
+
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/updater_demon_main.h
+stdio.h
+-
+curl/curl.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+string
+-
+Sources/Helpers/Helper.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 
 /usr/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h

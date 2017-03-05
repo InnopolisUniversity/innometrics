@@ -902,7 +902,7 @@ struct sqlite3_io_methods {
 ** <li>[[SQLITE_FCNTL_VFS_POINTER]]
 ** ^The [SQLITE_FCNTL_VFS_POINTER] opcode finds a pointer to the top-level
 ** [VFSes] currently in use.  ^(The argument X in
-** sqlite3_file_control(db,SQLITE_FCNTL_VFS_POINTER,X) must be
+** sqlite3_file_control(dbMeasurements,SQLITE_FCNTL_VFS_POINTER,X) must be
 ** of type "[sqlite3_vfs] **".  This opcodes will set *X
 ** to a pointer to the top-level VFS.)^
 ** ^When there are multiple VFS shims in the stack, this opcode finds the
@@ -2431,7 +2431,7 @@ SQLITE_API void sqlite3_free_table(char **result);
 **
 ** <blockquote><pre>
 **  char *zSQL = sqlite3_mprintf("INSERT INTO table VALUES('%q')", zText);
-**  sqlite3_exec(db, zSQL, 0, 0, 0);
+**  sqlite3_exec(dbMeasurements, zSQL, 0, 0, 0);
 **  sqlite3_free(zSQL);
 ** </pre></blockquote>
 **
@@ -2459,7 +2459,7 @@ SQLITE_API void sqlite3_free_table(char **result);
 **
 ** <blockquote><pre>
 **  char *zSQL = sqlite3_mprintf("INSERT INTO table VALUES(%Q)", zText);
-**  sqlite3_exec(db, zSQL, 0, 0, 0);
+**  sqlite3_exec(dbMeasurements, zSQL, 0, 0, 0);
 **  sqlite3_free(zSQL);
 ** </pre></blockquote>
 **
@@ -3127,28 +3127,28 @@ SQLITE_API void sqlite3_progress_handler(sqlite3*, int, int(*)(void*), void*);
 **
 ** <table border="1" align=center cellpadding=5>
 ** <tr><th> URI filenames <th> Results
-** <tr><td> file:data.db <td> 
-**          Open the file "data.db" in the current directory.
-** <tr><td> file:/home/fred/data.db<br>
-**          file:///home/fred/data.db <br> 
-**          file://localhost/home/fred/data.db <br> <td> 
-**          Open the database file "/home/fred/data.db".
-** <tr><td> file://darkstar/home/fred/data.db <td> 
+** <tr><td> file:data.dbMeasurements <td>
+**          Open the file "data.dbMeasurements" in the current directory.
+** <tr><td> file:/home/fred/data.dbMeasurements<br>
+**          file:///home/fred/data.dbMeasurements <br>
+**          file://localhost/home/fred/data.dbMeasurements <br> <td>
+**          Open the database file "/home/fred/data.dbMeasurements".
+** <tr><td> file://darkstar/home/fred/data.dbMeasurements <td>
 **          An error. "darkstar" is not a recognized authority.
 ** <tr><td style="white-space:nowrap"> 
-**          file:///C:/Documents%20and%20Settings/fred/Desktop/data.db
-**     <td> Windows only: Open the file "data.db" on fred's desktop on drive
+**          file:///C:/Documents%20and%20Settings/fred/Desktop/data.dbMeasurements
+**     <td> Windows only: Open the file "data.dbMeasurements" on fred's desktop on drive
 **          C:. Note that the %20 escaping in this example is not strictly 
 **          necessary - space characters can be used literally
 **          in URI filenames.
-** <tr><td> file:data.db?mode=ro&cache=private <td> 
-**          Open file "data.db" in the current directory for read-only access.
+** <tr><td> file:data.dbMeasurements?mode=ro&cache=private <td>
+**          Open file "data.dbMeasurements" in the current directory for read-only access.
 **          Regardless of whether or not shared-cache mode is enabled by
 **          default, use a private cache.
-** <tr><td> file:/home/fred/data.db?vfs=unix-dotfile <td>
-**          Open file "/home/fred/data.db". Use the special VFS "unix-dotfile"
+** <tr><td> file:/home/fred/data.dbMeasurements?vfs=unix-dotfile <td>
+**          Open file "/home/fred/data.dbMeasurements". Use the special VFS "unix-dotfile"
 **          that uses dot-files in place of posix advisory locking.
-** <tr><td> file:data.db?mode=readonly <td> 
+** <tr><td> file:data.dbMeasurements?mode=readonly <td>
 **          An error. "readonly" is not a valid option for the "mode" parameter.
 ** </table>
 **
@@ -3175,15 +3175,15 @@ SQLITE_API void sqlite3_progress_handler(sqlite3*, int, int(*)(void*), void*);
 */
 SQLITE_API int sqlite3_open(
   const char *filename,   /* Database filename (UTF-8) */
-  sqlite3 **ppDb          /* OUT: SQLite db handle */
+  sqlite3 **ppDb          /* OUT: SQLite dbMeasurements handle */
 );
 SQLITE_API int sqlite3_open16(
   const void *filename,   /* Database filename (UTF-16) */
-  sqlite3 **ppDb          /* OUT: SQLite db handle */
+  sqlite3 **ppDb          /* OUT: SQLite dbMeasurements handle */
 );
 SQLITE_API int sqlite3_open_v2(
   const char *filename,   /* Database filename (UTF-8) */
-  sqlite3 **ppDb,         /* OUT: SQLite db handle */
+  sqlite3 **ppDb,         /* OUT: SQLite dbMeasurements handle */
   int flags,              /* Flags */
   const char *zVfs        /* Name of VFS module to use */
 );
@@ -3425,7 +3425,7 @@ SQLITE_API int sqlite3_limit(sqlite3*, int id, int newVal);
 ** To execute an SQL query, it must first be compiled into a byte-code
 ** program using one of these routines.
 **
-** The first argument, "db", is a [database connection] obtained from a
+** The first argument, "dbMeasurements", is a [database connection] obtained from a
 ** prior successful call to [sqlite3_open()], [sqlite3_open_v2()] or
 ** [sqlite3_open16()].  The database connection must not have been closed.
 **
@@ -5063,11 +5063,11 @@ SQLITE_API int sqlite3_collation_needed16(
 ** of SQLite.
 */
 SQLITE_API int sqlite3_key(
-  sqlite3 *db,                   /* Database to be rekeyed */
+  sqlite3 *dbMeasurements,                   /* Database to be rekeyed */
   const void *pKey, int nKey     /* The key */
 );
 SQLITE_API int sqlite3_key_v2(
-  sqlite3 *db,                   /* Database to be rekeyed */
+  sqlite3 *dbMeasurements,                   /* Database to be rekeyed */
   const char *zDbName,           /* Name of the database */
   const void *pKey, int nKey     /* The key */
 );
@@ -5081,11 +5081,11 @@ SQLITE_API int sqlite3_key_v2(
 ** of SQLite.
 */
 SQLITE_API int sqlite3_rekey(
-  sqlite3 *db,                   /* Database to be rekeyed */
+  sqlite3 *dbMeasurements,                   /* Database to be rekeyed */
   const void *pKey, int nKey     /* The new key */
 );
 SQLITE_API int sqlite3_rekey_v2(
-  sqlite3 *db,                   /* Database to be rekeyed */
+  sqlite3 *dbMeasurements,                   /* Database to be rekeyed */
   const char *zDbName,           /* Name of the database */
   const void *pKey, int nKey     /* The new key */
 );
@@ -5650,7 +5650,7 @@ SQLITE_API int sqlite3_table_column_metadata(
 **
 ** ^Extension loading must be enabled using
 ** [sqlite3_enable_load_extension()] or
-** [sqlite3_db_config](db,[SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION],1,NULL)
+** [sqlite3_db_config](dbMeasurements,[SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION],1,NULL)
 ** prior to calling this API,
 ** otherwise an error will be returned.
 **
@@ -5686,7 +5686,7 @@ SQLITE_API int sqlite3_load_extension(
 **
 ** ^This interface enables or disables both the C-API
 ** [sqlite3_load_extension()] and the SQL function [load_extension()].
-** ^(Use [sqlite3_db_config](db,[SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION],..)
+** ^(Use [sqlite3_db_config](dbMeasurements,[SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION],..)
 ** to enable or disable only the C-API.)^
 **
 ** <b>Security warning:</b> It is recommended that extension loading
@@ -5712,7 +5712,7 @@ SQLITE_API int sqlite3_enable_load_extension(sqlite3 *db, int onoff);
 **
 ** <blockquote><pre>
 ** &nbsp;  int xEntryPoint(
-** &nbsp;    sqlite3 *db,
+** &nbsp;    sqlite3 *dbMeasurements,
 ** &nbsp;    const char **pzErrMsg,
 ** &nbsp;    const struct sqlite3_api_routines *pThunk
 ** &nbsp;  );
@@ -7859,7 +7859,7 @@ SQLITE_API int sqlite3_wal_checkpoint(sqlite3 *db, const char *zDb);
 **
 ** ^If parameter zDb is NULL or points to a zero length string, then the
 ** specified operation is attempted on all WAL databases [attached] to 
-** [database connection] db.  In this case the
+** [database connection] dbMeasurements.  In this case the
 ** values written to output parameters *pnLog and *pnCkpt are undefined. ^If 
 ** an SQLITE_BUSY error is encountered when processing one or more of the 
 ** attached WAL databases, the operation is still attempted on any remaining 
@@ -7930,7 +7930,7 @@ SQLITE_API int sqlite3_vtab_config(sqlite3*, int op, ...);
 ** <dl>
 ** <dt>SQLITE_VTAB_CONSTRAINT_SUPPORT
 ** <dd>Calls of the form
-** [sqlite3_vtab_config](db,SQLITE_VTAB_CONSTRAINT_SUPPORT,X) are supported,
+** [sqlite3_vtab_config](dbMeasurements,SQLITE_VTAB_CONSTRAINT_SUPPORT,X) are supported,
 ** where X is an integer.  If X is zero, then the [virtual table] whose
 ** [xCreate] or [xConnect] method invoked [sqlite3_vtab_config()] does not
 ** support constraints.  In this configuration (which is the default) if
@@ -8524,7 +8524,7 @@ typedef struct sqlite3_changeset_iter sqlite3_changeset_iter;
 /*
 ** CAPI3REF: Create A New Session Object
 **
-** Create a new session object attached to database handle db. If successful,
+** Create a new session object attached to database handle dbMeasurements. If successful,
 ** a pointer to the new object is written to *ppSession and SQLITE_OK is
 ** returned. If an error occurs, *ppSession is set to NULL and an SQLite
 ** error code (e.g. SQLITE_NOMEM) is returned.
@@ -8552,8 +8552,8 @@ typedef struct sqlite3_changeset_iter sqlite3_changeset_iter;
 ** to the database when the session object is created.
 */
 int sqlite3session_create(
-  sqlite3 *db,                    /* Database handle */
-  const char *zDb,                /* Name of db (e.g. "main") */
+  sqlite3 *dbMeasurements,                    /* Database handle */
+  const char *zDb,                /* Name of dbMeasurements (e.g. "main") */
   sqlite3_session **ppSession     /* OUT: New session object */
 );
 
@@ -9384,7 +9384,7 @@ void sqlite3changegroup_delete(sqlite3_changegroup*);
 ** CAPI3REF: Apply A Changeset To A Database
 **
 ** Apply a changeset to a database. This function attempts to update the
-** "main" database attached to handle db with the changes found in the
+** "main" database attached to handle dbMeasurements with the changes found in the
 ** changeset passed via the second and third arguments.
 **
 ** The fourth argument (xFilter) passed to this function is the "filter
@@ -9517,7 +9517,7 @@ void sqlite3changegroup_delete(sqlite3_changegroup*);
 ** SQLite error code returned.
 */
 int sqlite3changeset_apply(
-  sqlite3 *db,                    /* Apply change to "main" db of this handle */
+  sqlite3 *dbMeasurements,                    /* Apply change to "main" dbMeasurements of this handle */
   int nChangeset,                 /* Size of changeset in bytes */
   void *pChangeset,               /* Changeset blob */
   int(*xFilter)(
@@ -9718,7 +9718,7 @@ int sqlite3changeset_apply(
 ** no guarantees are made as to the size of the chunks of data returned.
 */
 int sqlite3changeset_apply_strm(
-  sqlite3 *db,                    /* Apply change to "main" db of this handle */
+  sqlite3 *dbMeasurements,                    /* Apply change to "main" dbMeasurements of this handle */
   int (*xInput)(void *pIn, void *pData, int *pnData), /* Input function */
   void *pIn,                                          /* First arg for xInput */
   int(*xFilter)(

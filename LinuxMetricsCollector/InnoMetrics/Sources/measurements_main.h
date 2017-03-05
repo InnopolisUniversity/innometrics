@@ -5,6 +5,8 @@
 #include <sys/time.h>	// timeval - and gettimeofday
 #include <memory>		// Smart Pointers
 #include <unordered_map>
+
+#include <csignal>
 #include <X11/Xlib.h>
 
 #include "WindowInfo.h"
@@ -27,6 +29,16 @@
 
 using namespace std;
 
+void signalHandler( int signum ) {
+    cout << "Interrupt signal (" << signum << ") received for measuring main.\n";
+
+    // cleanup and close up stuff here
+    // terminate program
+//    exit_sig = 0;
+    pthread_exit(NULL);
+
+}
+
 const long EVENT_MASK = FocusChangeMask;
 
 //unordered_map<Window, int> windowMap;
@@ -41,6 +53,8 @@ long getMilliseconds() {
     return (tv.tv_sec * 1000000LL + tv.tv_usec) / 1000LL;
 }
 
+
+
 #if OUTPUT_WAY == 0
 
 void HandleSaveInitialization() {
@@ -53,8 +67,7 @@ void SubmitMetric() {
 
 #elif OUTPUT_WAY == 2
 
-#define SQLITE_PATH "metrics.db"
-sqlite3 *db;
+sqlite3 *dbMeasurements;
 //
 //static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
 //    int i;
@@ -66,9 +79,9 @@ sqlite3 *db;
 //}
 
 void HandleSaveInitialization() {
-    int rc = sqlite3_open(SQLITE_PATH, &db);
+    int rc = sqlite3_open(SQLITE_PATH, &dbMeasurements);
     if (rc) {
-        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(dbMeasurements));
         exit(-1);
     } else {
         fprintf(stdout, "Opened database successfully\n");
@@ -76,7 +89,7 @@ void HandleSaveInitialization() {
 
     sqlite3_stmt *stmt;
 
-    rc = sqlite3_prepare(db, DbQueries::CreateMetricTable().c_str(), -1, &stmt, 0);
+    rc = sqlite3_prepare(dbMeasurements, DbQueries::CreateMetricTable().c_str(), -1, &stmt, 0);
     sqlite3_step(stmt);
     sqlite3_finalize(stmt);
 
@@ -89,7 +102,7 @@ void HandleSaveInitialization() {
 
 void SubmitMetric() {
     sqlite3_stmt *stmt;
-    int rc = sqlite3_prepare(db, DbQueries::InsertMetric().c_str(), -1, &stmt, 0);
+    int rc = sqlite3_prepare(dbMeasurements, DbQueries::InsertMetric().c_str(), -1, &stmt, 0);
 
     sqlite3_bind_int64(stmt, 1, windowInfo->FocusedWindow);
     sqlite3_bind_int64(stmt, 2, windowInfo->ClientWindow);
@@ -114,7 +127,7 @@ void SubmitMetric() {
 
 //void ShowMetric() {
 //    char *zErrMsg = 0;
-//    int rc = sqlite3_exec(db, DbQueries::SelectAllMetrics().c_str(), callback, 0, &zErrMsg);
+//    int rc = sqlite3_exec(dbMeasurements, DbQueries::SelectAllMetrics().c_str(), callback, 0, &zErrMsg);
 //    if (rc != SQLITE_OK) {
 //        fprintf(stderr, "SQL error: %s\n", zErrMsg);
 //        sqlite3_free(zErrMsg);
@@ -237,9 +250,12 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
+//void* measurements_main(void *);
 
-int measurements_main() {
+void* measurements_main(void *unused) {
     setlocale(LC_ALL, "");
+
+    signal(SIGINT, signalHandler);
 
     HandleSaveInitialization();
     //ShowMetric();
@@ -276,7 +292,7 @@ int measurements_main() {
 
     //Register Input device events version 2
     if (XInputListener::RegisterEventsXi2(display)) {
-        return -1;
+        return NULL;
     }
 
     delete[] windows;

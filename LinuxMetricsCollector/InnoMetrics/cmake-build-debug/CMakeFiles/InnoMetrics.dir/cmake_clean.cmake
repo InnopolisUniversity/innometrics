@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o"
   "CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o"
   "CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o"
-  "InnoMetrics.pdb"
-  "InnoMetrics"
+  "/home/alon/innometrics_build/InnoMetrics/InnoMetrics.pdb"
+  "/home/alon/innometrics_build/InnoMetrics/InnoMetrics"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -230,7 +230,7 @@ public:
 
         if (rc != SQLITE_OK) {
             fprintf(stderr, "Failed to fetch data: %s\n", sqlite3_errmsg(db));
-//            sqlite3_close(db);
+//            sqlite3_close(dbMeasurements);
             url = std::string();
             return;
         }
@@ -245,7 +245,7 @@ public:
         }
         if(res)
             sqlite3_finalize(res);
-//        sqlite3_close(db);
+//        sqlite3_close(dbMeasurements);
     }
 
     //endregion
