@@ -26,6 +26,7 @@
 		2591AAC81E631F630064E303 /* ServerPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591AAC71E631F630064E303 /* ServerPrefs.swift */; };
 		25D73DF81E478D95006C7BB7 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D73DF71E478D95006C7BB7 /* Keyword.swift */; };
 		25E0B4F11E61E0FC00765EA2 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0B4F01E61E0FC00765EA2 /* MainWindowController.swift */; };
+		25F160BE1E64C190001B0B7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F160BD1E64C190001B0B7D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		2591AAC71E631F630064E303 /* ServerPrefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerPrefs.swift; sourceTree = "<group>"; };
 		25D73DF71E478D95006C7BB7 /* Keyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		25E0B4F01E61E0FC00765EA2 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		25F160BD1E64C190001B0B7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAC31C00E605E9A9C55DA596 /* Pods-InnometricsTransfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnometricsTransfer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer.debug.xcconfig"; sourceTree = "<group>"; };
 		CEDC31B9C38EF9571C8AFA2B /* Pods-InnometricsTransfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnometricsTransfer.release.xcconfig"; path = "Pods/Target Support Files/Pods-InnometricsTransfer/Pods-InnometricsTransfer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				2554328E1DCB9D2100735C27 /* Assets.xcassets */,
 				255432901DCB9D2100735C27 /* Main.storyboard */,
 				255432931DCB9D2100735C27 /* Info.plist */,
+				25F160BD1E64C190001B0B7D /* GoogleService-Info.plist */,
 				251FBE571E47F14D0031DB6D /* Application.swift */,
 				25E0B4F01E61E0FC00765EA2 /* MainWindowController.swift */,
 				2591AAC71E631F630064E303 /* ServerPrefs.swift */,
@@ -215,6 +218,7 @@
 			files = (
 				2554328F1DCB9D2100735C27 /* Assets.xcassets in Resources */,
 				255432921DCB9D2100735C27 /* Main.storyboard in Resources */,
+				25F160BE1E64C190001B0B7D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

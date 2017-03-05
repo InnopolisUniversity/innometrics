@@ -84,6 +84,49 @@ class MetricsController: NSViewController, NSTableViewDataSource, NSTableViewDel
         }
     }
     
+    @IBAction func deleteMetricsBtn_Clicked(_ sender: AnyObject) {
+        if (newMetricsTableView != nil) {
+            let indexes = newMetricsTableView.selectedRowIndexes.map { Int($0) }
+            
+            if (indexes.count > 0) {
+                let alert: NSAlert = NSAlert()
+                alert.messageText = "Would you like to delete selected metrics?"
+                alert.informativeText = "This action cannot be undone."
+                alert.alertStyle = NSAlertStyle.critical
+                alert.addButton(withTitle: "Delete")
+                alert.addButton(withTitle: "Cancel")
+                
+                let answer = alert.runModal()
+                if answer == NSAlertFirstButtonReturn {
+                    
+                    let startChangingDbNotificationName = Notification.Name("db_start_changing")
+                    let endChangingDbNotificationName = Notification.Name("db_end_changing")
+                    DistributedNotificationCenter.default().postNotificationName(startChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
+                
+                    newMetricsTableView.beginUpdates()
+                    let indexPaths = newMetricsTableView.selectedRowIndexes
+                    let appDelegate = NSApplication.shared().delegate as! AppDelegate
+                    let context = appDelegate.managedObjectContext
+                    for i in indexes.reversed() {
+                        context.delete(metrics[i])
+                        metrics.remove(at: i)
+                    }
+                
+                    do {
+                        // Save Changes
+                        try context.save()
+                    } catch {
+                        print (error)
+                    }
+
+                    newMetricsTableView.endUpdates()
+                    newMetricsTableView.removeRows (at: indexPaths, withAnimation: .effectFade)
+                    DistributedNotificationCenter.default().postNotificationName(endChangingDbNotificationName, object: Bundle.main.bundleIdentifier, deliverImmediately: true)
+                }
+            }
+        }
+    }
+    
     // Table view utilities
     func numberOfRows(in tableView: NSTableView) -> Int {
         return metrics.count
