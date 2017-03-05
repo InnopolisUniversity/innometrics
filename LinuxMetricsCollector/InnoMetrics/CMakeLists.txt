@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.6)
 project(InnoMetrics)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "/home/alon/innometrics_build/InnoMetrics/")
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -lcurl")
 
 ### GTK
@@ -33,7 +35,7 @@ add_library(sqlite3lib SHARED ${sqlite3_srcs})
 set(MAIN_SOURCES main.cpp)
 
 ### Collecting data program
-set(METRIC_SOURCES Sources/measurements_main.h Sources/Helpers/XInputListener.cpp Sources/Helpers/XInputListener.h Sources/BrowserFile.cpp Sources/BrowserFile.h Sources/Helpers/Helper.cpp Sources/Helpers/Helper.h Sources/Helpers/SystemInfoHelper.cpp Sources/Helpers/SystemInfoHelper.h Sources/DbQueries.h Sources/ApplicationType.h Sources/Helpers/WindowHelper.h Sources/Helpers/WindowHelper.cpp Sources/WindowInfo.h Sources/WindowInfo.cpp send_demon_main.h)
+set(METRIC_SOURCES Sources/measurements_main.h Sources/Helpers/XInputListener.cpp Sources/Helpers/XInputListener.h Sources/BrowserFile.cpp Sources/BrowserFile.h Sources/Helpers/Helper.cpp Sources/Helpers/Helper.h Sources/Helpers/SystemInfoHelper.cpp Sources/Helpers/SystemInfoHelper.h Sources/DbQueries.h Sources/ApplicationType.h Sources/Helpers/WindowHelper.h Sources/Helpers/WindowHelper.cpp Sources/WindowInfo.h Sources/WindowInfo.cpp send_demon_main.h updater_demon_main.h)
 
 add_executable(InnoMetrics ${MAIN_SOURCES} ${METRIC_SOURCES})
 
@@ -45,3 +47,17 @@ target_link_libraries(InnoMetrics sqlite3lib)
 
 # Link the target to the CURL libararies
 target_link_libraries(InnoMetrics curl)
+
+###############################################################################
+## packaging ##################################################################
+###############################################################################
+
+install(TARGETS InnoMetrics DESTINATION bin)
+#install(DIRECTORY resources DESTINATION example_destination)
+
+set(CPACK_PACKAGE_NAME "InnoMetrics Linux")
+set(CPACK_PACKAGE_VERSION "1.0.0.0")
+
+set(CPACK_MONOLITHIC_INSTALL 1)
+
+include(CPack)

@@ -1,4 +1,10 @@
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/package.dir
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/package_source.dir
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/install.dir
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/install/local.dir
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/install/strip.dir
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/InnoMetrics.dir
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/sqlite3lib.dir

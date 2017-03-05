@@ -35,6 +35,7 @@ CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/WindowInfo.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/measurements_main.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../main.cpp
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../send_demon_main.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../updater_demon_main.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: /usr/include/atk-1.0/atk/atk-enum-types.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: /usr/include/atk-1.0/atk/atk.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: /usr/include/atk-1.0/atk/atkaction.h
