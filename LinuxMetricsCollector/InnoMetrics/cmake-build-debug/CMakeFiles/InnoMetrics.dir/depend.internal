@@ -25,18 +25,23 @@ CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o
  ../sqlite3/sqlite3.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/AddTimeFilterDialog.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/ApplicationType.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Authorization.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/DbQueries.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/ConfigParser.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/HelpFunctions.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/WindowHelper.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/XInputListener.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/SettingDialog.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/send_demon_main.h
+ /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/updater_demon_main.h
  /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp
- /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h
- /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/updater_demon_main.h
  /usr/include/atk-1.0/atk/atk-enum-types.h
  /usr/include/atk-1.0/atk/atk.h
  /usr/include/atk-1.0/atk/atkaction.h

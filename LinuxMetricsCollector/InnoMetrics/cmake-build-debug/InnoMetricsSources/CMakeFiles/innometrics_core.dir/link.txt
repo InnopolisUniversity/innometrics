@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinnometrics_core.a  CMakeFiles/innometrics_core.dir/Sources/Helpers/XInputListener.cpp.o CMakeFiles/innometrics_core.dir/Sources/BrowserFile.cpp.o CMakeFiles/innometrics_core.dir/Sources/Helpers/Helper.cpp.o CMakeFiles/innometrics_core.dir/Sources/Helpers/SystemInfoHelper.cpp.o CMakeFiles/innometrics_core.dir/Sources/Helpers/WindowHelper.cpp.o CMakeFiles/innometrics_core.dir/Sources/WindowInfo.cpp.o
+/usr/bin/ranlib libinnometrics_core.a

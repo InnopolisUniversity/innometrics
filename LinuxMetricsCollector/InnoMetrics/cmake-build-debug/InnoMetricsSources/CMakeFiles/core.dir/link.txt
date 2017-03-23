@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcore.a  CMakeFiles/core.dir/Sources/Helpers/XInputListener.cpp.o CMakeFiles/core.dir/Sources/BrowserFile.cpp.o CMakeFiles/core.dir/Sources/Helpers/Helper.cpp.o CMakeFiles/core.dir/Sources/Helpers/SystemInfoHelper.cpp.o CMakeFiles/core.dir/Sources/Helpers/WindowHelper.cpp.o CMakeFiles/core.dir/Sources/WindowInfo.cpp.o
+/usr/bin/ranlib libcore.a

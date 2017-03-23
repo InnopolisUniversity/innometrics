@@ -7,8 +7,15 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "../CMake/ImportX11.cmake"
   "../CMakeLists.txt"
+  "../InnoMetricsSources/CMake/ImportX11.cmake"
+  "../InnoMetricsSources/CMakeLists.txt"
+  "../InnoMetricsSources/Sources/inno.cfg"
+  "../InnoMetricsTests/CMakeLists.txt"
+  "../InnoMetricsTests/lib/googletest-master/CMakeLists.txt"
+  "../InnoMetricsTests/lib/googletest-master/googlemock/CMakeLists.txt"
+  "../InnoMetricsTests/lib/googletest-master/googletest/CMakeLists.txt"
+  "../InnoMetricsTests/lib/googletest-master/googletest/cmake/internal_utils.cmake"
   "CMakeFiles/3.6.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.6.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.6.2/CMakeSystem.cmake"
@@ -25,13 +32,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/CPack.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/CPackComponent.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/CheckFunctionExists.cmake"
+  "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/CheckIncludeFile.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/CheckLibraryExists.cmake"
+  "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/CheckSymbolExists.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/Compiler/GNU-C.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/Compiler/GNU-CXX.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/Compiler/GNU.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/FindPackageMessage.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/FindPkgConfig.cmake"
+  "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/FindPythonInterp.cmake"
+  "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/FindThreads.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/FindX11.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/Platform/Linux-GNU-C.cmake"
   "/home/alon/Downloads/clion-2016.2.2/bin/cmake/share/cmake-3.6/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -50,13 +61,23 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CPackConfig.cmake"
-  "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "InnoMetricsSources/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "InnoMetricsTests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "InnoMetricsTests/lib/googletest-master/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "InnoMetricsTests/lib/googletest-master/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "InnoMetricsTests/lib/googletest-master/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/InnoMetrics.dir/DependInfo.cmake"
-  "CMakeFiles/sqlite3lib.dir/DependInfo.cmake"
+  "CMakeFiles/innometrics_run.dir/DependInfo.cmake"
+  "InnoMetricsSources/CMakeFiles/InnoMetrics.dir/DependInfo.cmake"
+  "InnoMetricsSources/CMakeFiles/sqlite3lib.dir/DependInfo.cmake"
+  "InnoMetricsSources/CMakeFiles/innometrics_core.dir/DependInfo.cmake"
+  "InnoMetricsTests/CMakeFiles/runUnitTests.dir/DependInfo.cmake"
+  "InnoMetricsTests/lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
+  "InnoMetricsTests/lib/googletest-master/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
+  "InnoMetricsTests/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "InnoMetricsTests/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )

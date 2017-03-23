@@ -10,7 +10,21 @@
 stdarg.h
 -
 
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/AddTimeFilterDialog.h
+gtk/gtk.h
+-
+sqlite3.h
+-
+cstring
+-
+
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/ApplicationType.h
+
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Authorization.h
+gtk/gtk.h
+-
+send_demon_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/send_demon_main.h
 
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/BrowserFile.cpp
 BrowserFile.h
@@ -44,9 +58,29 @@ WindowInfo.h
 Helpers/Helper.h
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/ConfigParser.h
+iostream
+-
+fstream
+-
+sstream
+-
+string
+-
+
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/HelpFunctions.h
+cstdio
+-
+string
+-
+
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.cpp
 Helper.h
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
+sstream
+-
+iomanip
+-
 
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
 string
@@ -69,6 +103,14 @@ locale
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.cpp
 SystemInfoHelper.h
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
+iostream
+-
+ifaddrs.h
+-
+netdb.h
+-
+map
+-
 
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/SystemInfoHelper.h
 unistd.h
@@ -80,6 +122,8 @@ net/if.h
 sys/ioctl.h
 -
 arpa/inet.h
+-
+linux/sockios.h
 -
 string.h
 -
@@ -125,6 +169,12 @@ cstring
 -
 X11/extensions/XInput2.h
 -
+
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/SettingDialog.h
+gtk/gtk.h
+-
+Helpers/ConfigParser.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/ConfigParser.h
 
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/WindowInfo.cpp
 WindowInfo.h
@@ -176,25 +226,7 @@ sstream
 fstream
 -
 
-/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp
-gtk/gtk.h
--
-time.h
--
-string
--
-thread
--
-Sources/measurements_main.h
-/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h
-send_demon_main.h
-/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h
-updater_demon_main.h
-/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/updater_demon_main.h
-memory
--
-
-/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/send_demon_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/send_demon_main.h
 stdio.h
 -
 curl/curl.h
@@ -205,8 +237,10 @@ chrono
 -
 sstream
 -
+Helpers/HelpFunctions.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/HelpFunctions.h
 
-/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/updater_demon_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/updater_demon_main.h
 stdio.h
 -
 curl/curl.h
@@ -221,8 +255,32 @@ sys/stat.h
 -
 string
 -
-Sources/Helpers/Helper.h
+Helpers/Helper.h
 /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/Helper.h
+Helpers/HelpFunctions.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/HelpFunctions.h
+
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/main.cpp
+gtk/gtk.h
+-
+string
+-
+thread
+-
+Sources/measurements_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/measurements_main.h
+Sources/updater_demon_main.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/updater_demon_main.h
+Sources/Helpers/ConfigParser.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Helpers/ConfigParser.h
+Sources/Authorization.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/Authorization.h
+Sources/SettingDialog.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/SettingDialog.h
+Sources/AddTimeFilterDialog.h
+/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/Sources/AddTimeFilterDialog.h
+ctype.h
+-
 
 /usr/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h

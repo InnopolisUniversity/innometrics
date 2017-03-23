@@ -24,18 +24,23 @@ CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o: ../Sources/WindowInfo.cpp
 CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o: ../Sources/WindowInfo.h
 
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../sqlite3/sqlite3.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/AddTimeFilterDialog.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/ApplicationType.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/Authorization.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/BrowserFile.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/DbQueries.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/Helpers/ConfigParser.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/Helpers/HelpFunctions.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/Helpers/Helper.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/Helpers/SystemInfoHelper.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/Helpers/WindowHelper.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/Helpers/XInputListener.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/SettingDialog.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/WindowInfo.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/measurements_main.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/send_demon_main.h
+CMakeFiles/InnoMetrics.dir/main.cpp.o: ../Sources/updater_demon_main.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: ../main.cpp
-CMakeFiles/InnoMetrics.dir/main.cpp.o: ../send_demon_main.h
-CMakeFiles/InnoMetrics.dir/main.cpp.o: ../updater_demon_main.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: /usr/include/atk-1.0/atk/atk-enum-types.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: /usr/include/atk-1.0/atk/atk.h
 CMakeFiles/InnoMetrics.dir/main.cpp.o: /usr/include/atk-1.0/atk/atkaction.h

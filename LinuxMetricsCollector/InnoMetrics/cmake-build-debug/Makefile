@@ -89,17 +89,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/alon/Downloads/clion-2016.2.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -144,6 +133,17 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/alon/Downloads/clion-2016.2.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles /home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/CMakeFiles/progress.marks
@@ -177,6 +177,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named innometrics_run
+
+# Build rule for target.
+innometrics_run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 innometrics_run
+.PHONY : innometrics_run
+
+# fast build rule for target.
+innometrics_run/fast:
+	$(MAKE) -f CMakeFiles/innometrics_run.dir/build.make CMakeFiles/innometrics_run.dir/build
+.PHONY : innometrics_run/fast
+
+#=============================================================================
 # Target rules for targets named InnoMetrics
 
 # Build rule for target.
@@ -186,7 +199,7 @@ InnoMetrics: cmake_check_build_system
 
 # fast build rule for target.
 InnoMetrics/fast:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/build
+	$(MAKE) -f InnoMetricsSources/CMakeFiles/InnoMetrics.dir/build.make InnoMetricsSources/CMakeFiles/InnoMetrics.dir/build
 .PHONY : InnoMetrics/fast
 
 #=============================================================================
@@ -199,170 +212,86 @@ sqlite3lib: cmake_check_build_system
 
 # fast build rule for target.
 sqlite3lib/fast:
-	$(MAKE) -f CMakeFiles/sqlite3lib.dir/build.make CMakeFiles/sqlite3lib.dir/build
+	$(MAKE) -f InnoMetricsSources/CMakeFiles/sqlite3lib.dir/build.make InnoMetricsSources/CMakeFiles/sqlite3lib.dir/build
 .PHONY : sqlite3lib/fast
 
-Sources/BrowserFile.o: Sources/BrowserFile.cpp.o
+#=============================================================================
+# Target rules for targets named innometrics_core
 
-.PHONY : Sources/BrowserFile.o
+# Build rule for target.
+innometrics_core: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 innometrics_core
+.PHONY : innometrics_core
 
-# target to build an object file
-Sources/BrowserFile.cpp.o:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.o
-.PHONY : Sources/BrowserFile.cpp.o
+# fast build rule for target.
+innometrics_core/fast:
+	$(MAKE) -f InnoMetricsSources/CMakeFiles/innometrics_core.dir/build.make InnoMetricsSources/CMakeFiles/innometrics_core.dir/build
+.PHONY : innometrics_core/fast
 
-Sources/BrowserFile.i: Sources/BrowserFile.cpp.i
+#=============================================================================
+# Target rules for targets named runUnitTests
 
-.PHONY : Sources/BrowserFile.i
+# Build rule for target.
+runUnitTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runUnitTests
+.PHONY : runUnitTests
 
-# target to preprocess a source file
-Sources/BrowserFile.cpp.i:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.i
-.PHONY : Sources/BrowserFile.cpp.i
+# fast build rule for target.
+runUnitTests/fast:
+	$(MAKE) -f InnoMetricsTests/CMakeFiles/runUnitTests.dir/build.make InnoMetricsTests/CMakeFiles/runUnitTests.dir/build
+.PHONY : runUnitTests/fast
 
-Sources/BrowserFile.s: Sources/BrowserFile.cpp.s
+#=============================================================================
+# Target rules for targets named gmock_main
 
-.PHONY : Sources/BrowserFile.s
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
 
-# target to generate assembly for a file
-Sources/BrowserFile.cpp.s:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/BrowserFile.cpp.s
-.PHONY : Sources/BrowserFile.cpp.s
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f InnoMetricsTests/lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make InnoMetricsTests/lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
 
-Sources/Helpers/Helper.o: Sources/Helpers/Helper.cpp.o
+#=============================================================================
+# Target rules for targets named gmock
 
-.PHONY : Sources/Helpers/Helper.o
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
 
-# target to build an object file
-Sources/Helpers/Helper.cpp.o:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.o
-.PHONY : Sources/Helpers/Helper.cpp.o
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f InnoMetricsTests/lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build.make InnoMetricsTests/lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
 
-Sources/Helpers/Helper.i: Sources/Helpers/Helper.cpp.i
+#=============================================================================
+# Target rules for targets named gtest_main
 
-.PHONY : Sources/Helpers/Helper.i
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
 
-# target to preprocess a source file
-Sources/Helpers/Helper.cpp.i:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.i
-.PHONY : Sources/Helpers/Helper.cpp.i
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f InnoMetricsTests/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make InnoMetricsTests/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
-Sources/Helpers/Helper.s: Sources/Helpers/Helper.cpp.s
+#=============================================================================
+# Target rules for targets named gtest
 
-.PHONY : Sources/Helpers/Helper.s
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
 
-# target to generate assembly for a file
-Sources/Helpers/Helper.cpp.s:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/Helper.cpp.s
-.PHONY : Sources/Helpers/Helper.cpp.s
-
-Sources/Helpers/SystemInfoHelper.o: Sources/Helpers/SystemInfoHelper.cpp.o
-
-.PHONY : Sources/Helpers/SystemInfoHelper.o
-
-# target to build an object file
-Sources/Helpers/SystemInfoHelper.cpp.o:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.o
-.PHONY : Sources/Helpers/SystemInfoHelper.cpp.o
-
-Sources/Helpers/SystemInfoHelper.i: Sources/Helpers/SystemInfoHelper.cpp.i
-
-.PHONY : Sources/Helpers/SystemInfoHelper.i
-
-# target to preprocess a source file
-Sources/Helpers/SystemInfoHelper.cpp.i:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.i
-.PHONY : Sources/Helpers/SystemInfoHelper.cpp.i
-
-Sources/Helpers/SystemInfoHelper.s: Sources/Helpers/SystemInfoHelper.cpp.s
-
-.PHONY : Sources/Helpers/SystemInfoHelper.s
-
-# target to generate assembly for a file
-Sources/Helpers/SystemInfoHelper.cpp.s:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/SystemInfoHelper.cpp.s
-.PHONY : Sources/Helpers/SystemInfoHelper.cpp.s
-
-Sources/Helpers/WindowHelper.o: Sources/Helpers/WindowHelper.cpp.o
-
-.PHONY : Sources/Helpers/WindowHelper.o
-
-# target to build an object file
-Sources/Helpers/WindowHelper.cpp.o:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.o
-.PHONY : Sources/Helpers/WindowHelper.cpp.o
-
-Sources/Helpers/WindowHelper.i: Sources/Helpers/WindowHelper.cpp.i
-
-.PHONY : Sources/Helpers/WindowHelper.i
-
-# target to preprocess a source file
-Sources/Helpers/WindowHelper.cpp.i:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.i
-.PHONY : Sources/Helpers/WindowHelper.cpp.i
-
-Sources/Helpers/WindowHelper.s: Sources/Helpers/WindowHelper.cpp.s
-
-.PHONY : Sources/Helpers/WindowHelper.s
-
-# target to generate assembly for a file
-Sources/Helpers/WindowHelper.cpp.s:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/WindowHelper.cpp.s
-.PHONY : Sources/Helpers/WindowHelper.cpp.s
-
-Sources/Helpers/XInputListener.o: Sources/Helpers/XInputListener.cpp.o
-
-.PHONY : Sources/Helpers/XInputListener.o
-
-# target to build an object file
-Sources/Helpers/XInputListener.cpp.o:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.o
-.PHONY : Sources/Helpers/XInputListener.cpp.o
-
-Sources/Helpers/XInputListener.i: Sources/Helpers/XInputListener.cpp.i
-
-.PHONY : Sources/Helpers/XInputListener.i
-
-# target to preprocess a source file
-Sources/Helpers/XInputListener.cpp.i:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.i
-.PHONY : Sources/Helpers/XInputListener.cpp.i
-
-Sources/Helpers/XInputListener.s: Sources/Helpers/XInputListener.cpp.s
-
-.PHONY : Sources/Helpers/XInputListener.s
-
-# target to generate assembly for a file
-Sources/Helpers/XInputListener.cpp.s:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/Helpers/XInputListener.cpp.s
-.PHONY : Sources/Helpers/XInputListener.cpp.s
-
-Sources/WindowInfo.o: Sources/WindowInfo.cpp.o
-
-.PHONY : Sources/WindowInfo.o
-
-# target to build an object file
-Sources/WindowInfo.cpp.o:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.o
-.PHONY : Sources/WindowInfo.cpp.o
-
-Sources/WindowInfo.i: Sources/WindowInfo.cpp.i
-
-.PHONY : Sources/WindowInfo.i
-
-# target to preprocess a source file
-Sources/WindowInfo.cpp.i:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.i
-.PHONY : Sources/WindowInfo.cpp.i
-
-Sources/WindowInfo.s: Sources/WindowInfo.cpp.s
-
-.PHONY : Sources/WindowInfo.s
-
-# target to generate assembly for a file
-Sources/WindowInfo.cpp.s:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/Sources/WindowInfo.cpp.s
-.PHONY : Sources/WindowInfo.cpp.s
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f InnoMetricsTests/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/build.make InnoMetricsTests/lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 main.o: main.cpp.o
 
@@ -370,7 +299,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/innometrics_run.dir/build.make CMakeFiles/innometrics_run.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -379,7 +308,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/innometrics_run.dir/build.make CMakeFiles/innometrics_run.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -388,35 +317,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/InnoMetrics.dir/build.make CMakeFiles/InnoMetrics.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/innometrics_run.dir/build.make CMakeFiles/innometrics_run.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-sqlite3/sqlite3.o: sqlite3/sqlite3.c.o
-
-.PHONY : sqlite3/sqlite3.o
-
-# target to build an object file
-sqlite3/sqlite3.c.o:
-	$(MAKE) -f CMakeFiles/sqlite3lib.dir/build.make CMakeFiles/sqlite3lib.dir/sqlite3/sqlite3.c.o
-.PHONY : sqlite3/sqlite3.c.o
-
-sqlite3/sqlite3.i: sqlite3/sqlite3.c.i
-
-.PHONY : sqlite3/sqlite3.i
-
-# target to preprocess a source file
-sqlite3/sqlite3.c.i:
-	$(MAKE) -f CMakeFiles/sqlite3lib.dir/build.make CMakeFiles/sqlite3lib.dir/sqlite3/sqlite3.c.i
-.PHONY : sqlite3/sqlite3.c.i
-
-sqlite3/sqlite3.s: sqlite3/sqlite3.c.s
-
-.PHONY : sqlite3/sqlite3.s
-
-# target to generate assembly for a file
-sqlite3/sqlite3.c.s:
-	$(MAKE) -f CMakeFiles/sqlite3lib.dir/build.make CMakeFiles/sqlite3lib.dir/sqlite3/sqlite3.c.s
-.PHONY : sqlite3/sqlite3.c.s
 
 # Help Target
 help:
@@ -427,37 +329,23 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... rebuild_cache"
+	@echo "... innometrics_run"
 	@echo "... InnoMetrics"
 	@echo "... sqlite3lib"
-	@echo "... Sources/BrowserFile.o"
-	@echo "... Sources/BrowserFile.i"
-	@echo "... Sources/BrowserFile.s"
-	@echo "... Sources/Helpers/Helper.o"
-	@echo "... Sources/Helpers/Helper.i"
-	@echo "... Sources/Helpers/Helper.s"
-	@echo "... Sources/Helpers/SystemInfoHelper.o"
-	@echo "... Sources/Helpers/SystemInfoHelper.i"
-	@echo "... Sources/Helpers/SystemInfoHelper.s"
-	@echo "... Sources/Helpers/WindowHelper.o"
-	@echo "... Sources/Helpers/WindowHelper.i"
-	@echo "... Sources/Helpers/WindowHelper.s"
-	@echo "... Sources/Helpers/XInputListener.o"
-	@echo "... Sources/Helpers/XInputListener.i"
-	@echo "... Sources/Helpers/XInputListener.s"
-	@echo "... Sources/WindowInfo.o"
-	@echo "... Sources/WindowInfo.i"
-	@echo "... Sources/WindowInfo.s"
+	@echo "... innometrics_core"
+	@echo "... runUnitTests"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... sqlite3/sqlite3.o"
-	@echo "... sqlite3/sqlite3.i"
-	@echo "... sqlite3/sqlite3.s"
 .PHONY : help
 
 

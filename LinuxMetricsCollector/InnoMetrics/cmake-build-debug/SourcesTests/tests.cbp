@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="tests"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\InnoMetrics\;CMake Files\InnoMetrics\CMake\;CMake Files\SourcesTests\;CMake Files\SourcesTests\lib\;CMake Files\SourcesTests\lib\googletest-master\;CMake Files\SourcesTests\lib\googletest-master\googlemock\;CMake Files\SourcesTests\lib\googletest-master\googletest\;CMake Files\SourcesTests\lib\googletest-master\googletest\cmake\;CMake Files\SourcesTests\Test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runBasicTests">
+				<Option output="/home/alon/innometrics_build/InnoMetrics/runBasicTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/innometrics_build/InnoMetrics/"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 runBasicTests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runBasicTests/fast">
+				<Option output="/home/alon/innometrics_build/InnoMetrics/runBasicTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/innometrics_build/InnoMetrics/"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/mirclient"/>
+					<Add directory="/usr/include/mircommon"/>
+					<Add directory="/usr/include/mircookie"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng12"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/sqlite3"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 runBasicTests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/cmake-build-debug/SourcesTests/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/Test/BasicTests.cpp">
+			<Option target="runBasicTests"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/src/gmock-all.cc">
+			<Option target="gmock_main"/>
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/src/gtest-all.cc">
+			<Option target="gmock_main"/>
+			<Option target="gmock"/>
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/inno.cfg">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/InnoMetrics/CMake/ImportX11.cmake">
+			<Option virtualFolder="CMake Files\InnoMetrics\CMake\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\SourcesTests\lib\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/Test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\Test\"/>
+		</Unit>
+		<Unit filename="/home/alon/ClionProjects/innometrics/LinuxMetricsCollector/InnoMetrics/SourcesTests/Test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\SourcesTests\Test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

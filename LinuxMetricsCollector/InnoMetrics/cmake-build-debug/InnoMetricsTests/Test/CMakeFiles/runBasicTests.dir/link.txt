@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/runBasicTests.dir/BasicTests.cpp.o  -o runBasicTests ../lib/googletest-master/googlemock/gtest/libgtest.a ../lib/googletest-master/googlemock/gtest/libgtest_main.a ../lib/googletest-master/googlemock/gtest/libgtest.a -lpthread 
