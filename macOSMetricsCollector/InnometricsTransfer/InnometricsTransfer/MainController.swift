@@ -80,7 +80,7 @@ class MainController: NSViewController {
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
-        lastTableRefreshTextField.stringValue = "Last update: \(dateFormatter.string(from: Date()))"
+        lastTableRefreshTextField.stringValue = "(Last update: \(dateFormatter.string(from: Date())))"
     }
 
     override var representedObject: Any? {
@@ -93,7 +93,7 @@ class MainController: NSViewController {
         metricsController.fetchNewMetricsAndRefreshTable()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss dd-MM-yyyy"
-        lastTableRefreshTextField.stringValue = "Last update: \(dateFormatter.string(from: Date()))"
+        lastTableRefreshTextField.stringValue = "(Last update: \(dateFormatter.string(from: Date())))"
     }
     
     @IBAction func clearDataBase(_ sender: AnyObject) {
@@ -168,7 +168,7 @@ class MainController: NSViewController {
             }
             UserPrefs.saveUserExludedKeywords(keywords: prefsKeywordsArray)
         
-            metricsController.fetchNewMetricsAndRefreshTable()
+            refreshMetricsTables(self)
         } else if keyPath == "arrangedObjects.application" {
             prefsAppsArray = []
             for app in appsArray {
@@ -176,21 +176,21 @@ class MainController: NSViewController {
             }
             UserPrefs.saveUserExludedApps(apps: prefsAppsArray)
             
-            metricsController.fetchNewMetricsAndRefreshTable()
+            refreshMetricsTables(self)
         }
     }
     
     @IBAction func fromDateFilterChanged(_ sender: AnyObject) {
         UserPrefs.saveExludedFromDate(date: fromDate.dateValue as NSDate)
         if (fromDateCheckBox.state == NSOnState) {
-            metricsController.fetchNewMetricsAndRefreshTable()
+            refreshMetricsTables(self)
         }
     }
     
     @IBAction func toDateFilterChanged(_ sender: AnyObject) {
         UserPrefs.saveExludedToDate(date: toDate.dateValue as NSDate)
         if (toDateCheckBox.state == NSOnState) {
-            metricsController.fetchNewMetricsAndRefreshTable()
+            refreshMetricsTables(self)
         }
     }
     
@@ -231,12 +231,12 @@ class MainController: NSViewController {
     
     @IBAction func fromDateFilterChecked(_ sender: AnyObject) {
         UserPrefs.saveNeedFromDateFilter(isNeeded: fromDateCheckBox.state == NSOnState)
-        metricsController.fetchNewMetricsAndRefreshTable()
+        refreshMetricsTables(self)
     }
     
     @IBAction func toDateFilterChecked(_ sender: AnyObject) {
         UserPrefs.saveNeedToDateFilter(isNeeded: toDateCheckBox.state == NSOnState)
-        metricsController.fetchNewMetricsAndRefreshTable()
+        refreshMetricsTables(self)
     }
     
     func clearDatabase() {
@@ -266,7 +266,7 @@ class MainController: NSViewController {
             // Save Changes
             try context.save()
             
-            metricsController.fetchNewMetricsAndRefreshTable()
+            refreshMetricsTables(self)
         } catch {
             print (error)
         }
